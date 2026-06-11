@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://t35sdu2fm24c"]
+
+[ext_resource type="Script" uid="uid://c532syuct3dkk" path="res://castle_card.gd" id="1_vvaiu"]
+
+[node name="CastleCard" type="Control" unique_id=346001701]
+custom_minimum_size = Vector2(593, 310)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 593.0
+offset_bottom = 310.0
+script = ExtResource("1_vvaiu")
+
+[node name="CastleImage" type="TextureRect" parent="." unique_id=1678546422]
+layout_mode = 0
+offset_right = 593.0
+offset_bottom = 230.0
+
+[node name="RarityLabel" type="Label" parent="." unique_id=522342119]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 215.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 20
+text = "RARE"
+
+[node name="RarityBanner" type="TextureRect" parent="." unique_id=626944144]
+layout_mode = 0
+offset_left = 528.0
+offset_right = 578.0
+offset_bottom = 70.0
+
+[node name="LevelLabel" type="Label" parent="." unique_id=1895471864]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 240.0
+offset_right = 265.0
+offset_bottom = 275.0
+
+[node name="NameLabel" type="Label" parent="." unique_id=310315701]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 275.0
+offset_right = 415.0
+offset_bottom = 310.0
+
+[node name="PlayersLabel" type="Label" parent="." unique_id=1229291135]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 275.0
+offset_right = 578.0
+offset_bottom = 310.0
+
+[node name="EventBadge" type="TextureRect" parent="." unique_id=1535462055]
+visible = false
+layout_mode = 0
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 65.0
+offset_bottom = 110.0
+
+[node name="CastleBtn" type="Button" parent="." unique_id=1462506092]
+layout_mode = 0
+offset_right = 593.0
+offset_bottom = 310.0
+flat = true

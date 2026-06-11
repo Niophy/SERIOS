@@ -1,0 +1,347 @@
+[gd_scene format=3 uid="uid://fiihc2xcl1ay"]
+
+[ext_resource type="PackedScene" uid="uid://t35sdu2fm24c" path="res://castle_card.tscn" id="1_awb6w"]
+[ext_resource type="Script" uid="uid://i3iwvi3kmq2q" path="res://castle_selection.gd" id="1_xdcbs"]
+
+[node name="CastleSelection" type="Control" unique_id=1484548271]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xdcbs")
+
+[node name="BackBtn" type="Button" parent="." unique_id=1541411128]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 160.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+
+[node name="PlayerCard" type="Panel" parent="." unique_id=141760821]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 30.0
+offset_right = 1645.0
+offset_bottom = 330.0
+
+[node name="CharacterImage" type="TextureRect" parent="PlayerCard" unique_id=926509359]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 20.0
+offset_right = 478.0
+offset_bottom = 220.0
+
+[node name="LevelLabel" type="Label" parent="PlayerCard" unique_id=690840733]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 40.0
+offset_right = 260.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 26
+text = "Lv. 35"
+horizontal_alignment = 1
+
+[node name="WarlordNameLabel" type="Label" parent="PlayerCard" unique_id=1651096699]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 260.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 26
+text = "Warlord"
+horizontal_alignment = 1
+
+[node name="CommandersLabel" type="Label" parent="PlayerCard" unique_id=968500107]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 140.0
+offset_right = 260.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 26
+text = "28 Commanders"
+horizontal_alignment = 1
+
+[node name="TierLabel" type="Label" parent="PlayerCard" unique_id=1701880055]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 40.0
+offset_right = 700.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 26
+text = "Epic Tier III"
+horizontal_alignment = 1
+
+[node name="TierIcon" type="TextureRect" parent="PlayerCard" unique_id=921002091]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 40.0
+offset_right = 745.0
+offset_bottom = 75.0
+
+[node name="PowerLabel" type="Label" parent="PlayerCard" unique_id=1164158034]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 140.0
+offset_right = 740.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 26
+text = "Power 128,450"
+horizontal_alignment = 1
+
+[node name="TierBadge" type="Label" parent="PlayerCard" unique_id=132110645]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 240.0
+offset_right = 408.0
+offset_bottom = 285.0
+theme_override_font_sizes/font_size = 26
+text = "III"
+horizontal_alignment = 1
+
+[node name="TopRightBar" type="Panel" parent="." unique_id=1020306632]
+layout_mode = 0
+offset_left = 2066.0
+offset_top = 30.0
+offset_right = 2512.0
+offset_bottom = 110.0
+
+[node name="VigorSlot" type="Panel" parent="TopRightBar" unique_id=1071037403]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 300.0
+offset_bottom = 70.0
+
+[node name="VigorIcon" type="TextureRect" parent="TopRightBar/VigorSlot" unique_id=164399748]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="VigorLabel" type="Label" parent="TopRightBar/VigorSlot" unique_id=427628344]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 225.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Vigor 42/60"
+horizontal_alignment = 1
+
+[node name="VigorPlusBtn" type="Button" parent="TopRightBar/VigorSlot" unique_id=750152579]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 10.0
+offset_right = 290.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="SettingBtn" type="Button" parent="TopRightBar" unique_id=2099140804]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 5.0
+offset_right = 430.0
+offset_bottom = 75.0
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1806153]
+layout_mode = 1
+offset_left = 816.0
+offset_top = 350.0
+offset_right = 1716.0
+offset_bottom = 410.0
+pivot_offset = Vector2(1388, 373)
+theme_override_font_sizes/font_size = 46
+text = "SELECT A CASTLE TO BATTLE"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="." unique_id=2114365232]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 415.0
+offset_right = 1716.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 36
+text = "Defeat the enemy and claim victory."
+horizontal_alignment = 1
+
+[node name="CastleGrid" type="GridContainer" parent="." unique_id=731415004]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 480.0
+offset_right = 1900.0
+offset_bottom = 1130.0
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 3
+
+[node name="CastleCard1" parent="CastleGrid" unique_id=346001701 instance=ExtResource("1_awb6w")]
+layout_mode = 2
+
+[node name="CastleCard2" parent="CastleGrid" unique_id=2131263425 instance=ExtResource("1_awb6w")]
+layout_mode = 2
+
+[node name="CastleCard3" parent="CastleGrid" unique_id=99093861 instance=ExtResource("1_awb6w")]
+layout_mode = 2
+
+[node name="CastleCard4" parent="CastleGrid" unique_id=1078943860 instance=ExtResource("1_awb6w")]
+layout_mode = 2
+
+[node name="CastleCard5" parent="CastleGrid" unique_id=336004017 instance=ExtResource("1_awb6w")]
+layout_mode = 2
+
+[node name="CastleCard6" parent="CastleGrid" unique_id=1902103162 instance=ExtResource("1_awb6w")]
+layout_mode = 2
+
+[node name="FilterPanel" type="Panel" parent="." unique_id=1620904890]
+layout_mode = 0
+offset_left = 1960.0
+offset_top = 300.0
+offset_right = 2480.0
+offset_bottom = 680.0
+
+[node name="FilterTitleLabel" type="Label" parent="FilterPanel" unique_id=1104282110]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 500.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "FILTER"
+horizontal_alignment = 1
+
+[node name="AllFilterBtn" type="Button" parent="FilterPanel" unique_id=1313912918]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 75.0
+offset_right = 500.0
+offset_bottom = 135.0
+
+[node name="RareFilterBtn" type="Button" parent="FilterPanel" unique_id=2102570796]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 145.0
+offset_right = 500.0
+offset_bottom = 205.0
+
+[node name="UncommonFilterBtn" type="Button" parent="FilterPanel" unique_id=496706475]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 215.0
+offset_right = 500.0
+offset_bottom = 275.0
+
+[node name="CommonFilterBtn" type="Button" parent="FilterPanel" unique_id=1727242977]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 285.0
+offset_right = 500.0
+offset_bottom = 345.0
+
+[node name="RewardsPanel" type="Panel" parent="." unique_id=74261373]
+layout_mode = 0
+offset_left = 1960.0
+offset_top = 700.0
+offset_right = 2480.0
+offset_bottom = 1020.0
+
+[node name="RewardsTitleLabel" type="Label" parent="RewardsPanel" unique_id=1551624478]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 500.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "POSSIBLE REWARDS"
+horizontal_alignment = 1
+
+[node name="Reward1Icon" type="TextureRect" parent="RewardsPanel" unique_id=1858622497]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 80.0
+offset_right = 140.0
+offset_bottom = 150.0
+
+[node name="Reward1Label" type="Label" parent="RewardsPanel" unique_id=1008592750]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 155.0
+offset_right = 175.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 26
+text = "RWARD 1"
+horizontal_alignment = 1
+
+[node name="Reward2Icon" type="TextureRect" parent="RewardsPanel" unique_id=1199516037]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 80.0
+offset_right = 295.0
+offset_bottom = 150.0
+
+[node name="Reward2Label" type="Label" parent="RewardsPanel" unique_id=548048203]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 155.0
+offset_right = 330.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 26
+text = "RWARD 2"
+horizontal_alignment = 1
+
+[node name="Reward3Icon" type="TextureRect" parent="RewardsPanel" unique_id=1840142264]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 80.0
+offset_right = 450.0
+offset_bottom = 150.0
+
+[node name="Reward3Label" type="Label" parent="RewardsPanel" unique_id=222946118]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 155.0
+offset_right = 485.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 26
+text = "REWARD 3"
+horizontal_alignment = 1
+
+[node name="ScalingNoteLabel" type="Label" parent="RewardsPanel" unique_id=118342983]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 210.0
+offset_right = 500.0
+offset_bottom = 270.0
+theme_override_font_sizes/font_size = 26
+text = "Difficulty scales with castle level."
+horizontal_alignment = 1
+
+[node name="RefreshBtn" type="Button" parent="." unique_id=1731229500]
+layout_mode = 0
+offset_left = 1960.0
+offset_top = 1040.0
+offset_right = 2480.0
+offset_bottom = 1130.0
+
+[node name="RefreshLabel" type="Label" parent="RefreshBtn" unique_id=1729284151]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 10.0
+offset_right = 410.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "REFRESH"
+horizontal_alignment = 1
+
+[node name="RefreshCostLabel" type="Label" parent="RefreshBtn" unique_id=8645399]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 52.0
+offset_right = 410.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 20
+text = "500"
+horizontal_alignment = 1

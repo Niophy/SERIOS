@@ -1,0 +1,256 @@
+[gd_scene format=3 uid="uid://cu5g5j8dchpdy"]
+
+[ext_resource type="Script" uid="uid://cjnc0x7ff174j" path="res://force_selection.gd" id="1_303sk"]
+
+[node name="ForceSelection" type="Control" unique_id=531205008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_303sk")
+
+[node name="BackBtn" type="Button" parent="." unique_id=1288430946]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 160.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+
+[node name="PlayerCard" type="Panel" parent="." unique_id=474956185]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 74.0
+offset_right = 1645.0
+offset_bottom = 419.0
+
+[node name="CharacterImage" type="TextureRect" parent="PlayerCard" unique_id=1568627739]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 37.0
+offset_right = 494.0
+offset_bottom = 267.0
+
+[node name="LevelLabel" type="Label" parent="PlayerCard" unique_id=1418177046]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 55.0
+offset_right = 270.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "Lv. 35"
+horizontal_alignment = 1
+
+[node name="WarlordNameLabel" type="Label" parent="PlayerCard" unique_id=1357544046]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 95.0
+offset_right = 270.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 26
+text = "Warlord"
+horizontal_alignment = 1
+
+[node name="TierLabel" type="Label" parent="PlayerCard" unique_id=624750806]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 55.0
+offset_right = 690.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "Epic Tier III"
+horizontal_alignment = 1
+
+[node name="TierIcon" type="TextureRect" parent="PlayerCard" unique_id=1522675130]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 55.0
+offset_right = 735.0
+offset_bottom = 90.0
+
+[node name="TierBadge" type="Label" parent="PlayerCard" unique_id=1709481692]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 275.0
+offset_right = 408.0
+offset_bottom = 325.0
+theme_override_font_sizes/font_size = 26
+text = "III"
+horizontal_alignment = 1
+
+[node name="CommandersLabel" type="Label" parent="PlayerCard" unique_id=227478319]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 160.0
+offset_right = 270.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 26
+text = "28 Commanders"
+horizontal_alignment = 1
+
+[node name="PowerLabel" type="Label" parent="PlayerCard" unique_id=1172422697]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 115.0
+offset_right = 570.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 26
+text = "Power 128,450"
+horizontal_alignment = 1
+
+[node name="TopRightBar" type="Panel" parent="." unique_id=666249568]
+layout_mode = 0
+offset_left = 2066.0
+offset_top = 30.0
+offset_right = 2512.0
+offset_bottom = 110.0
+
+[node name="VigorSlot" type="Panel" parent="TopRightBar" unique_id=2125341977]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 300.0
+offset_bottom = 70.0
+
+[node name="VigorIcon" type="TextureRect" parent="TopRightBar/VigorSlot" unique_id=1395411501]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="VigorLabel" type="Label" parent="TopRightBar/VigorSlot" unique_id=1827822707]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 225.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Vigor 42/60"
+horizontal_alignment = 1
+
+[node name="VigorPlusBtn" type="Button" parent="TopRightBar/VigorSlot" unique_id=1539304740]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 10.0
+offset_right = 290.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="SettingBtn" type="Button" parent="TopRightBar" unique_id=1310608321]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 5.0
+offset_right = 430.0
+offset_bottom = 75.0
+
+[node name="TitleLabel" type="Label" parent="." unique_id=600948389]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 640.0
+offset_right = 1766.0
+offset_bottom = 710.0
+theme_override_font_sizes/font_size = 40
+text = "CHOOSE YOUR FORCE"
+horizontal_alignment = 1
+
+[node name="SoloBtn" type="Button" parent="." unique_id=1875564752]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 730.0
+offset_right = 971.0
+offset_bottom = 1140.0
+
+[node name="SoloIconArea" type="TextureRect" parent="SoloBtn" unique_id=650568274]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 38.0
+offset_right = 304.0
+offset_bottom = 226.0
+
+[node name="SoloTitleLabel" type="Label" parent="SoloBtn" unique_id=1676252588]
+layout_mode = 0
+offset_top = 250.0
+offset_right = 440.0
+offset_bottom = 305.0
+theme_override_font_sizes/font_size = 26
+text = "SOLO"
+horizontal_alignment = 1
+
+[node name="SoloDescLabel" type="Label" parent="SoloBtn" unique_id=1762054566]
+layout_mode = 0
+offset_top = 315.0
+offset_right = 440.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 26
+text = "Fight alone.
+Prove your strength."
+horizontal_alignment = 1
+
+[node name="DueBtn" type="Button" parent="." unique_id=1420435665]
+layout_mode = 0
+offset_left = 1046.0
+offset_top = 730.0
+offset_right = 1486.0
+offset_bottom = 1140.0
+
+[node name="DueIconArea" type="TextureRect" parent="DueBtn" unique_id=2147243649]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 20.0
+offset_right = 340.0
+offset_bottom = 220.0
+
+[node name="DueTitleLabel" type="Label" parent="DueBtn" unique_id=1947725647]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 480.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 26
+text = "DUE"
+horizontal_alignment = 1
+
+[node name="DueDescLabel" type="Label" parent="DueBtn" unique_id=279343770]
+layout_mode = 0
+offset_top = 315.0
+offset_right = 440.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 26
+text = "Fight side by side.
+One goal, one victory."
+horizontal_alignment = 1
+
+[node name="QuadBtn" type="Button" parent="." unique_id=1451565000]
+layout_mode = 0
+offset_left = 1561.0
+offset_top = 730.0
+offset_right = 2001.0
+offset_bottom = 1140.0
+
+[node name="QuadIconArea" type="TextureRect" parent="QuadBtn" unique_id=1933412759]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 20.0
+offset_right = 340.0
+offset_bottom = 220.0
+
+[node name="QuadTitleLabel" type="Label" parent="QuadBtn" unique_id=91975562]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 480.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 26
+text = "QUAD"
+horizontal_alignment = 1
+
+[node name="QuadDescLabel" type="Label" parent="QuadBtn" unique_id=1362825028]
+layout_mode = 0
+offset_top = 315.0
+offset_right = 440.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 26
+text = "Four warriors, one army.
+Victory is ours."
+horizontal_alignment = 1

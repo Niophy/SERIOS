@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d18vrxqelf06j"]
+
+[ext_resource type="Script" uid="uid://daouxg2qtavdc" path="res://placeholder_screen.gd" id="1_gpmn4"]
+
+[node name="PlaceHolderScreen" type="Control" unique_id=531205008]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gpmn4")
+
+[node name="CampainLabel" type="Label" parent="." unique_id=881303804]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "CAMPAIGN"
+
+[node name="BackBtn" type="Button" parent="." unique_id=1288430946]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "BACK"
