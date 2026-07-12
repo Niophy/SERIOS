@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://b6tflu2qmr1vy"]
+
+[ext_resource type="Script" uid="uid://dd308mcnrox4y" path="res://battle_overview.gd" id="1_xnhr1"]
+
+[node name="BattleOverview" type="Control" unique_id=812559478]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2532.0
+offset_bottom = 1170.0
+script = ExtResource("1_xnhr1")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=407095245]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 40.0
+offset_right = 900.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 26
+text = "Battle Overview"
+
+[node name="BackBtn" type="Button" parent="." unique_id=513470906]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 160.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+
+[node name="TopRightBar" type="Panel" parent="." unique_id=2088191392]
+layout_mode = 0
+offset_left = 2066.0
+offset_top = 30.0
+offset_right = 2512.0
+offset_bottom = 110.0
+
+[node name="VigorSlot" type="Panel" parent="TopRightBar" unique_id=1932611136]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 300.0
+offset_bottom = 70.0
+
+[node name="VigorIcon" type="TextureRect" parent="TopRightBar/VigorSlot" unique_id=759339269]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="VigorLabel" type="Label" parent="TopRightBar/VigorSlot" unique_id=243781227]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 225.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Vigor 42/60"
+horizontal_alignment = 1
+
+[node name="VigorPlusBtn" type="Button" parent="TopRightBar/VigorSlot" unique_id=1800441798]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 10.0
+offset_right = 290.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="SettingBtn" type="Button" parent="TopRightBar" unique_id=1063560241]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 5.0
+offset_right = 430.0
+offset_bottom = 75.0
+
+[node name="MapView" type="Panel" parent="." unique_id=628234339]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 130.0
+offset_right = 1900.0
+offset_bottom = 1010.0
+
+[node name="BattleMap" type="Control" parent="MapView" unique_id=1775640197]
+anchors_preset = 0
+offset_right = 1880.0
+offset_bottom = 880.0
+
+[node name="MapLegend" type="Panel" parent="MapView" unique_id=471895682]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 640.0
+offset_right = 410.0
+offset_bottom = 850.0
+
+[node name="PlayerStatusPanel" type="Panel" parent="." unique_id=1688108170]
+layout_mode = 0
+offset_left = 1920.0
+offset_top = 130.0
+offset_right = 2520.0
+offset_bottom = 690.0
+
+[node name="PlayerStatusLabel" type="Label" parent="PlayerStatusPanel" unique_id=1043362005]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 580.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 26
+text = "Players Status"
+
+[node name="AlliedLabel" type="Label" parent="PlayerStatusPanel" unique_id=87280280]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 84.0
+offset_right = 580.0
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 26
+text = "Allied Warlords"
+
+[node name="AlliedList" type="VBoxContainer" parent="PlayerStatusPanel" unique_id=564997575]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 130.0
+offset_right = 580.0
+offset_bottom = 394.0
+
+[node name="EnemyLabel" type="Label" parent="PlayerStatusPanel" unique_id=640594970]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 410.0
+offset_right = 580.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 26
+text = "Enemy"
+
+[node name="EnemyRow" type="Panel" parent="PlayerStatusPanel" unique_id=1545694418]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 456.0
+offset_right = 580.0
+offset_bottom = 516.0
+
+[node name="BattleInfoPanel" type="Panel" parent="." unique_id=815255473]
+layout_mode = 0
+offset_left = 1920.0
+offset_top = 710.0
+offset_right = 2520.0
+offset_bottom = 880.0
+
+[node name="BattleInfoLabel" type="Label" parent="BattleInfoPanel" unique_id=539773306]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 580.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 26
+text = "Battle Info"
+
+[node name="MapNameLabel" type="Label" parent="BattleInfoPanel" unique_id=1494891013]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 580.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 26
+text = "Map: —"
+
+[node name="ModeLabel" type="Label" parent="BattleInfoPanel" unique_id=1571488739]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 124.0
+offset_right = 580.0
+offset_bottom = 164.0
+theme_override_font_sizes/font_size = 26
+text = "Mode: Matchmaking · Quad"
+
+[node name="RewardsPanel" type="Panel" parent="." unique_id=2113069039]
+layout_mode = 0
+offset_left = 1920.0
+offset_top = 900.0
+offset_right = 2520.0
+offset_bottom = 1170.0
+
+[node name="RewardsLabel" type="Label" parent="RewardsPanel" unique_id=125346395]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 580.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 26
+text = "Rewards"
+
+[node name="RewardsRow" type="Label" parent="RewardsPanel" unique_id=359539492]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 580.0
+offset_bottom = 250.0
+theme_override_font_sizes/font_size = 26
+text = "[HBoxContainer — instances RewardSlot ×3]"
+
+[node name="MatchupBar" type="Panel" parent="." unique_id=1928108705]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 1020.0
+offset_right = 1900.0
+offset_bottom = 1160.0
+
+[node name="AlliedTotalLabel" type="Label" parent="MatchupBar" unique_id=1404328299]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 30.0
+offset_right = 620.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 26
+text = "Allied Total — %"
+
+[node name="AdvantageLabel" type="Label" parent="MatchupBar" unique_id=775603764]
+layout_mode = 0
+offset_left = 690.0
+offset_top = 30.0
+offset_right = 1190.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 26
+text = "Advantage:"
+
+[node name="EnemyRequiredLabel" type="Label" parent="MatchupBar" unique_id=2046842203]
+layout_mode = 0
+offset_left = 1260.0
+offset_top = 30.0
+offset_right = 1820.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 26
+text = "Enemy Total —"

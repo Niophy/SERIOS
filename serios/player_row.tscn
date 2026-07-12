@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://2aseawfmffye"]
+
+[ext_resource type="Script" uid="uid://dphbgdc7l6ojv" path="res://player_row.gd" id="1_ugq6p"]
+
+[node name="PlayerRow" type="Panel" unique_id=1172344500]
+offset_right = 560.0
+offset_bottom = 60.0
+script = ExtResource("1_ugq6p")
+
+[node name="SlotBadge" type="Label" parent="." unique_id=2030488048]
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "1"
+
+[node name="NameLabel" type="Label" parent="." unique_id=1341353195]
+layout_mode = 0
+offset_left = 60.0
+offset_right = 360.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "Player name"
+
+[node name="PowerLabel" type="Label" parent="." unique_id=1307298657]
+layout_mode = 0
+offset_left = 370.0
+offset_right = 490.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "%"
+
+[node name="CommandersLabel" type="Label" parent="." unique_id=199207619]
+layout_mode = 0
+offset_left = 480.0
+offset_right = 576.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "Com"
+
+[node name="RowBtn" type="Button" parent="." unique_id=1177276414]
+layout_mode = 0
+offset_right = 560.0
+offset_bottom = 60.0
+text = "Button"
+flat = true
