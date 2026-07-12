@@ -31,9 +31,9 @@ func _ready() -> void:
 		_spawn_allies()
 
 func _get_allied_count() -> int:
-	match Nav.payload.get("mode", "solo"):
-		"due":  return 2
-		"quad": return 4
+	match Nav.payload.get("mode", "Solo"):
+		"Due":  return 2
+		"Quad": return 4
 		_:      return 1
 
 func _spawn_allies() -> void:
@@ -51,4 +51,8 @@ func _on_row_pressed(data: Dictionary) -> void:
 
 func _on_back_btn_pressed() -> void:
 	print("[SERIOS] BACK pressed")
-	Nav.go_back()
+	match Nav.payload.get("mode", ""):
+		"Due", "Quad":
+			Nav.go_to("res://team_castle_selection.tscn", Nav.payload)
+		_:
+			Nav.go_to("res://castle_selection.tscn", Nav.payload)

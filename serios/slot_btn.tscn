@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bslotbnscene2"]
+
+[ext_resource type="Script" uid="uid://dslotbn0scrpt" path="res://slot_btn.gd" id="1_slot"]
+
+[node name="Slot" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 150.0
+offset_bottom = 120.0
+script = ExtResource("1_slot")
+
+[node name="Frame" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SlotLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Empty"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="LockLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "LOCKED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SlotBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

@@ -1,0 +1,576 @@
+[gd_scene format=3 uid="uid://bgnr4lsscene0"]
+
+[ext_resource type="Script" uid="uid://dgnr4ls0scrpt" path="res://generals.gd" id="1_gnrls"]
+[ext_resource type="PackedScene" uid="uid://bhrocrdscene1" path="res://hero_card.tscn" id="2_hcard"]
+[ext_resource type="PackedScene" uid="uid://bslotbnscene2" path="res://slot_btn.tscn" id="3_slot"]
+
+[node name="Generals" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gnrls")
+
+[node name="TopBar" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 2532.0
+offset_bottom = 100.0
+
+[node name="BackBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+
+[node name="TitleLabel" type="Label" parent="TopBar"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 20.0
+offset_right = 430.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 46
+text = "GENERALS"
+
+[node name="HelpBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 20.0
+offset_right = 490.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 26
+text = "?"
+
+[node name="ResourceBar" type="Panel" parent="TopBar"]
+layout_mode = 0
+offset_left = 1440.0
+offset_top = 10.0
+offset_right = 2440.0
+offset_bottom = 90.0
+
+[node name="DrillSlot" type="Panel" parent="TopBar/ResourceBar"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 380.0
+offset_bottom = 70.0
+
+[node name="DrillIcon" type="TextureRect" parent="TopBar/ResourceBar/DrillSlot"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="DrillLabel" type="Label" parent="TopBar/ResourceBar/DrillSlot"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 315.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Drill Manuals 12,384"
+horizontal_alignment = 1
+
+[node name="DrillPlusBtn" type="Button" parent="TopBar/ResourceBar/DrillSlot"]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 10.0
+offset_right = 375.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="GoldSlot" type="Panel" parent="TopBar/ResourceBar"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 10.0
+offset_right = 700.0
+offset_bottom = 70.0
+
+[node name="GoldIcon" type="TextureRect" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="GoldLabel" type="Label" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 235.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Gold 938,250"
+horizontal_alignment = 1
+
+[node name="GoldPlusBtn" type="Button" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 10.0
+offset_right = 290.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="GemSlot" type="Panel" parent="TopBar/ResourceBar"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 10.0
+offset_right = 1000.0
+offset_bottom = 70.0
+
+[node name="GemIcon" type="TextureRect" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="GemLabel" type="Label" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 215.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Gems 1,250"
+horizontal_alignment = 1
+
+[node name="GemPlusBtn" type="Button" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 10.0
+offset_right = 270.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="SettingsBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 2452.0
+offset_top = 15.0
+offset_right = 2512.0
+offset_bottom = 85.0
+
+[node name="HeroesList" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 120.0
+offset_right = 620.0
+offset_bottom = 1150.0
+
+[node name="FilterBtn" type="Button" parent="HeroesList"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 580.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 26
+text = "FILTER"
+
+[node name="HeroScroll" type="ScrollContainer" parent="HeroesList"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 100.0
+offset_right = 580.0
+offset_bottom = 1010.0
+
+[node name="HeroList" type="VBoxContainer" parent="HeroesList/HeroScroll"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="HeroCard1" parent="HeroesList/HeroScroll/HeroList" instance=ExtResource("2_hcard")]
+layout_mode = 2
+
+[node name="HeroCard2" parent="HeroesList/HeroScroll/HeroList" instance=ExtResource("2_hcard")]
+layout_mode = 2
+
+[node name="HeroCard3" parent="HeroesList/HeroScroll/HeroList" instance=ExtResource("2_hcard")]
+layout_mode = 2
+
+[node name="HeroCard4" parent="HeroesList/HeroScroll/HeroList" instance=ExtResource("2_hcard")]
+layout_mode = 2
+
+[node name="HeroCard5" parent="HeroesList/HeroScroll/HeroList" instance=ExtResource("2_hcard")]
+layout_mode = 2
+
+[node name="HeroCard6" parent="HeroesList/HeroScroll/HeroList" instance=ExtResource("2_hcard")]
+layout_mode = 2
+
+[node name="HeroDisplay" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 120.0
+offset_right = 1660.0
+offset_bottom = 1150.0
+
+[node name="NameLabel" type="Label" parent="HeroDisplay"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 430.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 36
+text = "Xu Huang"
+
+[node name="FavoriteBtn" type="Button" parent="HeroDisplay"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 20.0
+offset_right = 490.0
+offset_bottom = 70.0
+
+[node name="ShareBtn" type="Button" parent="HeroDisplay"]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 20.0
+offset_right = 550.0
+offset_bottom = 70.0
+
+[node name="TierBadge" type="Label" parent="HeroDisplay"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 100.0
+offset_right = 330.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 26
+text = "Epic III"
+
+[node name="TierPipRow" type="HBoxContainer" parent="HeroDisplay"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 145.0
+offset_right = 110.0
+offset_bottom = 169.0
+
+[node name="Pip1" type="Panel" parent="HeroDisplay/TierPipRow"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="Pip2" type="Panel" parent="HeroDisplay/TierPipRow"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="Pip3" type="Panel" parent="HeroDisplay/TierPipRow"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="ShadowFocusLabel" type="Label" parent="HeroDisplay"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 190.0
+offset_right = 430.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 26
+text = "Shadow / Focus"
+
+[node name="RoleTagsLabel" type="Label" parent="HeroDisplay"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 240.0
+offset_right = 430.0
+offset_bottom = 280.0
+theme_override_font_sizes/font_size = 26
+text = "Warlord · Vanguard · Duelist"
+
+[node name="PowerLabel" type="Label" parent="HeroDisplay"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 300.0
+offset_right = 430.0
+offset_bottom = 345.0
+theme_override_font_sizes/font_size = 30
+text = "Power 938%"
+
+[node name="Portrait" type="TextureRect" parent="HeroDisplay"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 120.0
+offset_right = 980.0
+offset_bottom = 740.0
+
+[node name="AppearanceBtn" type="Button" parent="HeroDisplay"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 930.0
+offset_right = 710.0
+offset_bottom = 1000.0
+theme_override_font_sizes/font_size = 26
+text = "APPEARANCE"
+
+[node name="RightPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1680.0
+offset_top = 120.0
+offset_right = 2512.0
+offset_bottom = 1150.0
+
+[node name="OverviewBtn" type="Button" parent="RightPanel"]
+layout_mode = 0
+offset_right = 416.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "OVERVIEW"
+
+[node name="AttributesBtn" type="Button" parent="RightPanel"]
+layout_mode = 0
+offset_left = 416.0
+offset_right = 832.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "ATTRIBUTES"
+
+[node name="OverviewPanel" type="Control" parent="RightPanel"]
+anchors_preset = 0
+offset_top = 80.0
+offset_right = 832.0
+offset_bottom = 1030.0
+
+[node name="CommandersSection" type="Panel" parent="RightPanel/OverviewPanel"]
+layout_mode = 0
+offset_right = 832.0
+offset_bottom = 280.0
+
+[node name="CommandersHeaderLabel" type="Label" parent="RightPanel/OverviewPanel/CommandersSection"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 300.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "COMMANDERS"
+
+[node name="CommandersCountLabel" type="Label" parent="RightPanel/OverviewPanel/CommandersSection"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 15.0
+offset_right = 812.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "4/5"
+horizontal_alignment = 2
+
+[node name="CommanderSlotsRow" type="Control" parent="RightPanel/OverviewPanel/CommandersSection"]
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 812.0
+offset_bottom = 180.0
+
+[node name="CommanderSlot1" parent="RightPanel/OverviewPanel/CommandersSection/CommanderSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 120.0
+
+[node name="CommanderSlot2" parent="RightPanel/OverviewPanel/CommandersSection/CommanderSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 160.0
+offset_right = 310.0
+offset_bottom = 120.0
+
+[node name="CommanderSlot3" parent="RightPanel/OverviewPanel/CommandersSection/CommanderSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 470.0
+offset_bottom = 120.0
+
+[node name="CommanderSlot4" parent="RightPanel/OverviewPanel/CommandersSection/CommanderSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 480.0
+offset_right = 630.0
+offset_bottom = 120.0
+
+[node name="CommanderSlot5" parent="RightPanel/OverviewPanel/CommandersSection/CommanderSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 640.0
+offset_right = 790.0
+offset_bottom = 120.0
+
+[node name="InfoBtn" type="Button" parent="RightPanel/OverviewPanel/CommandersSection"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 190.0
+offset_right = 60.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 22
+text = "i"
+
+[node name="ManageCommandersBtn" type="Button" parent="RightPanel/OverviewPanel/CommandersSection"]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 190.0
+offset_right = 812.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 22
+text = "MANAGE"
+
+[node name="GearSection" type="Panel" parent="RightPanel/OverviewPanel"]
+layout_mode = 0
+offset_top = 300.0
+offset_right = 832.0
+offset_bottom = 600.0
+
+[node name="GearHeaderLabel" type="Label" parent="RightPanel/OverviewPanel/GearSection"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 300.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "GEAR"
+
+[node name="GearCountLabel" type="Label" parent="RightPanel/OverviewPanel/GearSection"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 15.0
+offset_right = 812.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "8/8"
+horizontal_alignment = 2
+
+[node name="GearSlotsRow" type="Control" parent="RightPanel/OverviewPanel/GearSection"]
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 812.0
+offset_bottom = 200.0
+
+[node name="GearSlot1" parent="RightPanel/OverviewPanel/GearSection/GearSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 140.0
+
+[node name="GearSlot2" parent="RightPanel/OverviewPanel/GearSection/GearSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 100.0
+offset_right = 192.0
+offset_bottom = 140.0
+
+[node name="GearSlot3" parent="RightPanel/OverviewPanel/GearSection/GearSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 292.0
+offset_bottom = 140.0
+
+[node name="GearSlot4" parent="RightPanel/OverviewPanel/GearSection/GearSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 392.0
+offset_bottom = 140.0
+
+[node name="GearSlot5" parent="RightPanel/OverviewPanel/GearSection/GearSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 400.0
+offset_right = 492.0
+offset_bottom = 140.0
+
+[node name="GearSlot6" parent="RightPanel/OverviewPanel/GearSection/GearSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 500.0
+offset_right = 592.0
+offset_bottom = 140.0
+
+[node name="GearSlot7" parent="RightPanel/OverviewPanel/GearSection/GearSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 600.0
+offset_right = 692.0
+offset_bottom = 140.0
+
+[node name="GearSlot8" parent="RightPanel/OverviewPanel/GearSection/GearSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 700.0
+offset_right = 792.0
+offset_bottom = 140.0
+
+[node name="ManageGearBtn" type="Button" parent="RightPanel/OverviewPanel/GearSection"]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 210.0
+offset_right = 812.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 22
+text = "MANAGE"
+
+[node name="SkillsSection" type="Panel" parent="RightPanel/OverviewPanel"]
+layout_mode = 0
+offset_top = 620.0
+offset_right = 832.0
+offset_bottom = 920.0
+
+[node name="SkillsHeaderLabel" type="Label" parent="RightPanel/OverviewPanel/SkillsSection"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 300.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "SKILLS"
+
+[node name="SkillsCountLabel" type="Label" parent="RightPanel/OverviewPanel/SkillsSection"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 15.0
+offset_right = 812.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "4/4"
+horizontal_alignment = 2
+
+[node name="SkillSlotsRow" type="Control" parent="RightPanel/OverviewPanel/SkillsSection"]
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 812.0
+offset_bottom = 200.0
+
+[node name="SkillSlot1" parent="RightPanel/OverviewPanel/SkillsSection/SkillSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 140.0
+
+[node name="SkillSlot2" parent="RightPanel/OverviewPanel/SkillsSection/SkillSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 204.0
+offset_right = 384.0
+offset_bottom = 140.0
+
+[node name="SkillSlot3" parent="RightPanel/OverviewPanel/SkillsSection/SkillSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 408.0
+offset_right = 588.0
+offset_bottom = 140.0
+
+[node name="SkillSlot4" parent="RightPanel/OverviewPanel/SkillsSection/SkillSlotsRow" instance=ExtResource("3_slot")]
+layout_mode = 0
+offset_left = 612.0
+offset_right = 792.0
+offset_bottom = 140.0
+
+[node name="ManageSkillsBtn" type="Button" parent="RightPanel/OverviewPanel/SkillsSection"]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 210.0
+offset_right = 812.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 22
+text = "MANAGE"
+
+[node name="AttributesPanel" type="Control" parent="RightPanel"]
+visible = false
+anchors_preset = 0
+offset_top = 80.0
+offset_right = 832.0
+offset_bottom = 1030.0
+
+[node name="AttributesStubLabel" type="Label" parent="RightPanel/AttributesPanel"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 380.0
+offset_right = 716.0
+offset_bottom = 430.0
+theme_override_font_sizes/font_size = 30
+text = "ATTRIBUTES — coming soon"
+horizontal_alignment = 1

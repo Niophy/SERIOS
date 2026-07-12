@@ -13,15 +13,15 @@ script = ExtResource("1_06t4h")
 
 [node name="PlayerInfo" type="Panel" parent="." unique_id=133434837]
 layout_mode = 1
-offset_right = 420.0
-offset_bottom = 180.0
+offset_right = 560.0
+offset_bottom = 200.0
 
 [node name="Avatar" type="TextureRect" parent="PlayerInfo" unique_id=1665194334]
 layout_mode = 1
 offset_left = 20.0
 offset_top = 20.0
-offset_right = 160.0
-offset_bottom = 160.0
+offset_right = 180.0
+offset_bottom = 180.0
 
 [node name="AvatarBtn" type="Button" parent="PlayerInfo/Avatar" unique_id=42586839]
 layout_mode = 1
@@ -32,132 +32,183 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 
+[node name="LevelBadge" type="Label" parent="PlayerInfo" unique_id=1758203641]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 150.0
+offset_right = 130.0
+offset_bottom = 190.0
+theme_override_font_sizes/font_size = 26
+text = "78"
+horizontal_alignment = 1
+
 [node name="PlayerName" type="Label" parent="PlayerInfo" unique_id=918256073]
 layout_mode = 1
-offset_left = 180.0
-offset_top = 20.0
-offset_right = 420.0
-offset_bottom = 70.0
+offset_left = 200.0
+offset_top = 15.0
+offset_right = 460.0
+offset_bottom = 60.0
 theme_override_font_sizes/font_size = 36
+text = "Jaber"
+
+[node name="WarlordTitle" type="Label" parent="PlayerInfo" unique_id=830456192]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 62.0
+offset_right = 460.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 22
 text = "Warlord"
 
 [node name="LevelBar" type="ProgressBar" parent="PlayerInfo" unique_id=929930063]
 layout_mode = 1
-offset_left = 180.0
-offset_top = 80.0
-offset_right = 420.0
-offset_bottom = 107.0
-value = 60.0
+offset_left = 200.0
+offset_top = 100.0
+offset_right = 450.0
+offset_bottom = 127.0
+value = 50.0
+
+[node name="XPLabel" type="Label" parent="PlayerInfo" unique_id=1204773385]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 100.0
+offset_right = 450.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 16
+text = "12,580 / 25,000"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LevelText" type="Label" parent="PlayerInfo" unique_id=1498931232]
 layout_mode = 0
-offset_left = 180.0
-offset_top = 110.0
-offset_right = 280.0
-offset_bottom = 140.0
+offset_left = 460.0
+offset_top = 100.0
+offset_right = 550.0
+offset_bottom = 127.0
 theme_override_font_sizes/font_size = 22
-text = "Lv. 35"
+text = "Lv. 78"
 
 [node name="RenownText" type="Label" parent="PlayerInfo" unique_id=124083228]
 layout_mode = 0
-offset_left = 180.0
-offset_top = 145.0
-offset_right = 300.0
-offset_bottom = 175.0
+offset_left = 200.0
+offset_top = 140.0
+offset_right = 500.0
+offset_bottom = 170.0
 theme_override_font_sizes/font_size = 20
-text = "Renown 3"
+text = "Renown 18,560"
 
 [node name="SeasonBtn" type="Button" parent="." unique_id=1570447593]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 200.0
-offset_right = 400.0
-offset_bottom = 340.0
+offset_top = 220.0
+offset_right = 640.0
+offset_bottom = 460.0
 flat = true
 
 [node name="SeasonNumber" type="Label" parent="SeasonBtn" unique_id=704977453]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 15.0
-offset_right = 220.0
-offset_bottom = 45.0
+offset_left = 30.0
+offset_top = 25.0
+offset_right = 330.0
+offset_bottom = 60.0
 theme_override_font_sizes/font_size = 22
-text = "SEASON 7"
+text = "SEASON 12"
 
 [node name="SeasonTitle" type="Label" parent="SeasonBtn" unique_id=1164165085]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 50.0
-offset_right = 360.0
-offset_bottom = 90.0
-theme_override_font_sizes/font_size = 34
-text = "CONQUEST"
+offset_left = 30.0
+offset_top = 75.0
+offset_right = 590.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 44
+text = "BLOODMOON"
 
 [node name="SeasonTimer" type="Label" parent="SeasonBtn" unique_id=1241606316]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 100.0
-offset_right = 360.0
-offset_bottom = 130.0
-theme_override_font_sizes/font_size = 20
-text = "End in: 12d 18h"
+offset_left = 30.0
+offset_top = 160.0
+offset_right = 430.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 22
+text = "12D 18:45:32"
 
 [node name="LeftColumn" type="Panel" parent="." unique_id=408376039]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = 360.0
-offset_right = 400.0
-offset_bottom = -190.0
-grow_vertical = 2
-
-[node name="BattlePassBtn" type="Button" parent="LeftColumn" unique_id=2086064128]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 20.0
-offset_right = 360.0
-offset_bottom = 150.0
-theme_override_font_sizes/font_size = 26
-text = "BATTLE PASS"
-
-[node name="MissionBtn" type="Button" parent="LeftColumn" unique_id=859375542]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 170.0
-offset_right = 360.0
-offset_bottom = 300.0
-theme_override_font_sizes/font_size = 26
-text = "MISSIONS"
+offset_top = 470.0
+offset_right = 640.0
+offset_bottom = 930.0
 
 [node name="EventsBtn" type="Button" parent="LeftColumn" unique_id=1136933984]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 320.0
-offset_right = 360.0
-offset_bottom = 450.0
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 150.0
 theme_override_font_sizes/font_size = 26
 text = "EVENTS"
 
-[node name="RankingBtn" type="Button" parent="LeftColumn" unique_id=2079183696]
+[node name="EventsSubLabel" type="Label" parent="LeftColumn/EventsBtn" unique_id=1367204958]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 470.0
-offset_right = 360.0
-offset_bottom = 600.0
+offset_top = 85.0
+offset_right = 560.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 20
+text = "17 Active"
+horizontal_alignment = 1
+
+[node name="BattlePassBtn" type="Button" parent="LeftColumn" unique_id=2086064128]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 170.0
+offset_right = 600.0
+offset_bottom = 300.0
 theme_override_font_sizes/font_size = 26
-text = "RANKING"
+text = "BATTLE PASS"
+
+[node name="BPLevelBadge" type="Label" parent="LeftColumn/BattlePassBtn" unique_id=1092837465]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 45.0
+offset_right = 65.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 26
+text = "35"
+horizontal_alignment = 1
+
+[node name="BPProgressBar" type="ProgressBar" parent="LeftColumn/BattlePassBtn" unique_id=2003471826]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 95.0
+offset_right = 415.0
+offset_bottom = 113.0
+value = 62.0
+
+[node name="BPProgressLabel" type="Label" parent="LeftColumn/BattlePassBtn" unique_id=1550918327]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 92.0
+offset_right = 560.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 18
+text = "620 / 1,000"
+
+[node name="AllianceBtn" type="Button" parent="LeftColumn" unique_id=1662044173]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 320.0
+offset_right = 600.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 26
+text = "ALLIANCE"
 
 [node name="ChatBar" type="Panel" parent="." unique_id=1251208862]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
+layout_mode = 0
 offset_left = 20.0
-offset_top = -210.0
-offset_right = 520.0
-offset_bottom = -30.0
-grow_vertical = 0
+offset_top = 1080.0
+offset_right = 1160.0
+offset_bottom = 1150.0
 mouse_filter = 1
 
 [node name="ChatBtn" type="Button" parent="ChatBar" unique_id=1355598966]
@@ -167,83 +218,140 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+flat = true
+
+[node name="ChatIcon" type="TextureRect" parent="ChatBar" unique_id=1394027561]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 55.0
+offset_bottom = 55.0
+
+[node name="ChatPreviewLabel" type="Label" parent="ChatBar" unique_id=1526084739]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 15.0
+offset_right = 1010.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 22
+text = "[Alliance] Jaber: Good luck in war today!"
+
+[node name="ChatExpandBtn" type="Button" parent="ChatBar" unique_id=1637205894]
+layout_mode = 0
+offset_left = 1075.0
+offset_top = 15.0
+offset_right = 1125.0
+offset_bottom = 55.0
+text = "^"
 
 [node name="TopRightBar" type="Panel" parent="." unique_id=661267219]
 layout_mode = 0
-offset_left = 420.0
+offset_left = 560.0
 offset_right = 2532.0
 offset_bottom = 80.0
 
-[node name="CoinIcon" type="Panel" parent="TopRightBar" unique_id=1425592717]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -1440.0
+[node name="GoldSlot" type="Panel" parent="TopRightBar" unique_id=1425592717]
+layout_mode = 0
+offset_left = 952.0
 offset_top = 10.0
-offset_right = -1140.0
+offset_right = 1192.0
 offset_bottom = 70.0
-grow_horizontal = 0
 
-[node name="CoinBtn" type="Button" parent="TopRightBar/CoinIcon" unique_id=2047685837]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-
-[node name="GoldSlot" type="Panel" parent="TopRightBar" unique_id=553285876]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -1120.0
+[node name="GoldIcon" type="TextureRect" parent="TopRightBar/GoldSlot" unique_id=1094522873]
+layout_mode = 0
+offset_left = 10.0
 offset_top = 10.0
-offset_right = -820.0
-offset_bottom = 70.0
-grow_horizontal = 0
+offset_right = 50.0
+offset_bottom = 50.0
 
-[node name="CoinBtn" type="Button" parent="TopRightBar/GoldSlot" unique_id=585856202]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
+[node name="GoldLabel" type="Label" parent="TopRightBar/GoldSlot" unique_id=671038822]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 180.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "938,250"
+horizontal_alignment = 1
+
+[node name="GoldPlusBtn" type="Button" parent="TopRightBar/GoldSlot" unique_id=1889200155]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 10.0
+offset_right = 230.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="VigorSlot" type="Panel" parent="TopRightBar" unique_id=553285876]
+layout_mode = 0
+offset_left = 1212.0
+offset_top = 10.0
+offset_right = 1452.0
+offset_bottom = 70.0
+
+[node name="VigorIcon" type="TextureRect" parent="TopRightBar/VigorSlot" unique_id=306411485]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="VigorLabel" type="Label" parent="TopRightBar/VigorSlot" unique_id=1470203114]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 180.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "42/60"
+horizontal_alignment = 1
+
+[node name="VigorPlusBtn" type="Button" parent="TopRightBar/VigorSlot" unique_id=1918702541]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 10.0
+offset_right = 230.0
+offset_bottom = 50.0
+text = "+"
 
 [node name="GemSlot" type="Panel" parent="TopRightBar" unique_id=1873798422]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -800.0
+layout_mode = 0
+offset_left = 1472.0
 offset_top = 10.0
-offset_right = -500.0
+offset_right = 1712.0
 offset_bottom = 70.0
-grow_horizontal = 0
 
-[node name="CoinBtn" type="Button" parent="TopRightBar/GemSlot" unique_id=146907849]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
+[node name="GemIcon" type="TextureRect" parent="TopRightBar/GemSlot" unique_id=925117164]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="GemLabel" type="Label" parent="TopRightBar/GemSlot" unique_id=482915633]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 180.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "1,250"
+horizontal_alignment = 1
+
+[node name="GemPlusBtn" type="Button" parent="TopRightBar/GemSlot" unique_id=590328741]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 10.0
+offset_right = 230.0
+offset_bottom = 50.0
+text = "+"
 
 [node name="FriendsSlot" type="Panel" parent="TopRightBar" unique_id=280007877]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -480.0
+layout_mode = 0
+offset_left = 1732.0
 offset_top = 10.0
-offset_right = -180.0
+offset_right = 1792.0
 offset_bottom = 70.0
-grow_horizontal = 0
 
 [node name="FriendsBtn" type="Button" parent="TopRightBar/FriendsSlot" unique_id=1587257673]
 layout_mode = 1
@@ -255,15 +363,11 @@ grow_vertical = 2
 flat = true
 
 [node name="MailSlot" type="Panel" parent="TopRightBar" unique_id=2142505273]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -160.0
+layout_mode = 0
+offset_left = 1812.0
 offset_top = 10.0
-offset_right = -100.0
+offset_right = 1872.0
 offset_bottom = 70.0
-grow_horizontal = 0
 
 [node name="MailBtn" type="Button" parent="TopRightBar/MailSlot" unique_id=1297595978]
 layout_mode = 1
@@ -275,15 +379,11 @@ grow_vertical = 2
 flat = true
 
 [node name="SettingsSlot" type="Panel" parent="TopRightBar" unique_id=1441204783]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -80.0
+layout_mode = 0
+offset_left = 1892.0
 offset_top = 10.0
-offset_right = -20.0
+offset_right = 1952.0
 offset_bottom = 70.0
-grow_horizontal = 0
 
 [node name="SettingBtn" type="Button" parent="TopRightBar/SettingsSlot" unique_id=1347379832]
 layout_mode = 1
@@ -295,80 +395,142 @@ grow_vertical = 2
 flat = true
 
 [node name="CharacterDisplay" type="Panel" parent="." unique_id=1787019168]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 610.0
+layout_mode = 0
+offset_left = 660.0
 offset_top = 100.0
-offset_right = -490.0
-offset_bottom = 860.0
-grow_horizontal = 2
+offset_right = 1972.0
+offset_bottom = 930.0
 
 [node name="CharacterBtn" type="Button" parent="CharacterDisplay" unique_id=1830213234]
 layout_mode = 1
-offset_left = 466.0
+offset_left = 406.0
 offset_top = 30.0
-offset_right = 966.0
+offset_right = 906.0
 offset_bottom = 730.0
 flat = true
 
-[node name="RightColumn" type="Panel" parent="." unique_id=530021]
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -300.0
-offset_top = 100.0
-offset_right = -20.0
-offset_bottom = -190.0
-grow_horizontal = 0
-grow_vertical = 2
-
-[node name="StoreBtn" type="Button" parent="RightColumn" unique_id=581703985]
+[node name="HeroPlate" type="Panel" parent="CharacterDisplay" unique_id=1355670284]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 38.0
-offset_right = 260.0
-offset_bottom = 168.0
-theme_override_font_sizes/font_size = 26
-text = "STORE"
+offset_left = 496.0
+offset_top = 620.0
+offset_right = 816.0
+offset_bottom = 820.0
+
+[node name="GlyphIcon" type="TextureRect" parent="CharacterDisplay/HeroPlate" unique_id=1043867251]
+layout_mode = 0
+offset_left = 135.0
+offset_right = 185.0
+offset_bottom = 50.0
+
+[node name="HeroNameLabel" type="Label" parent="CharacterDisplay/HeroPlate" unique_id=1671529038]
+layout_mode = 0
+offset_top = 55.0
+offset_right = 320.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 30
+text = "Xu Huang"
+horizontal_alignment = 1
+
+[node name="TierLabel" type="Label" parent="CharacterDisplay/HeroPlate" unique_id=1804352617]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 100.0
+offset_right = 190.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 24
+text = "Epic III"
+horizontal_alignment = 1
+
+[node name="TierPipRow" type="HBoxContainer" parent="CharacterDisplay/HeroPlate" unique_id=1247906318]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 103.0
+offset_right = 280.0
+offset_bottom = 127.0
+
+[node name="Pip1" type="Panel" parent="CharacterDisplay/HeroPlate/TierPipRow" unique_id=1836450912]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="Pip2" type="Panel" parent="CharacterDisplay/HeroPlate/TierPipRow" unique_id=1927035846]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="Pip3" type="Panel" parent="CharacterDisplay/HeroPlate/TierPipRow" unique_id=1058274639]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="InspectBtn" type="Button" parent="CharacterDisplay/HeroPlate" unique_id=1780356429]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 145.0
+offset_right = 315.0
+offset_bottom = 190.0
+flat = true
+
+[node name="RightColumn" type="Panel" parent="." unique_id=530021]
+layout_mode = 0
+offset_left = 1992.0
+offset_top = 330.0
+offset_right = 2512.0
+offset_bottom = 880.0
 
 [node name="GeneralsBtn" type="Button" parent="RightColumn" unique_id=51960125]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 206.0
-offset_right = 260.0
-offset_bottom = 336.0
+offset_top = 20.0
+offset_right = 500.0
+offset_bottom = 170.0
 theme_override_font_sizes/font_size = 26
 text = "GENERALS"
 
-[node name="RecruitBtn" type="Button" parent="RightColumn" unique_id=2044907449]
+[node name="GeneralsSubLabel" type="Label" parent="RightColumn/GeneralsBtn" unique_id=1839207456]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 374.0
-offset_right = 260.0
-offset_bottom = 504.0
-theme_override_font_sizes/font_size = 26
-text = "RECRUIT"
-
-[node name="AllianceBtn" type="Button" parent="RightColumn" unique_id=1235922905]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 542.0
-offset_right = 260.0
-offset_bottom = 672.0
-theme_override_font_sizes/font_size = 26
-text = "ALLIANCE"
+offset_top = 105.0
+offset_right = 460.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 18
+text = "Heroes · Commanders · Skills · Gear"
+horizontal_alignment = 1
 
 [node name="InventoryBtn" type="Button" parent="RightColumn" unique_id=1748630278]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 710.0
-offset_right = 260.0
-offset_bottom = 840.0
+offset_top = 190.0
+offset_right = 500.0
+offset_bottom = 340.0
 theme_override_font_sizes/font_size = 26
 text = "INVENTORY"
+
+[node name="InventorySubLabel" type="Label" parent="RightColumn/InventoryBtn" unique_id=1483920571]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 105.0
+offset_right = 460.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 18
+text = "Items · Materials · Glyphs"
+horizontal_alignment = 1
+
+[node name="StoreBtn" type="Button" parent="RightColumn" unique_id=581703985]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 360.0
+offset_right = 500.0
+offset_bottom = 510.0
+theme_override_font_sizes/font_size = 26
+text = "STORE"
+
+[node name="StoreSubLabel" type="Label" parent="RightColumn/StoreBtn" unique_id=1927340586]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 105.0
+offset_right = 460.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 18
+text = "Items · Bundles · Offers"
+horizontal_alignment = 1
 
 [node name="ModeButtons" type="Panel" parent="." unique_id=843132837]
 layout_mode = 1
@@ -377,44 +539,65 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 540.0
-offset_top = -230.0
+offset_top = -240.0
 offset_right = -320.0
-offset_bottom = -30.0
+offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="CampaignBtn" type="Button" parent="ModeButtons" unique_id=872434721]
 layout_mode = 0
-offset_left = 30.0
+offset_left = 80.0
 offset_top = 10.0
-offset_right = 410.0
-offset_bottom = 190.0
+offset_right = 530.0
+offset_bottom = 130.0
 theme_override_font_sizes/font_size = 26
 text = "CAMPAIGN"
 
+[node name="CampaignSubLabel" type="Label" parent="ModeButtons/CampaignBtn" unique_id=904417211]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 430.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 18
+text = "Story & Missions"
+horizontal_alignment = 1
+
 [node name="BattleBtn" type="Button" parent="ModeButtons" unique_id=510464261]
 layout_mode = 0
-offset_left = 440.0
+offset_left = 610.0
 offset_top = 10.0
-offset_right = 820.0
-offset_bottom = 190.0
+offset_right = 1060.0
+offset_bottom = 130.0
 theme_override_font_sizes/font_size = 26
 text = "BATTLE"
 
+[node name="BattleSubLabel" type="Label" parent="ModeButtons/BattleBtn" unique_id=612089344]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 430.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 18
+text = "Solo / PvE"
+horizontal_alignment = 1
+
 [node name="MatchmakingBtn" type="Button" parent="ModeButtons" unique_id=2077577103]
 layout_mode = 0
-offset_left = 850.0
+offset_left = 1140.0
 offset_top = 10.0
-offset_right = 1230.0
-offset_bottom = 190.0
+offset_right = 1590.0
+offset_bottom = 130.0
 theme_override_font_sizes/font_size = 26
 text = "MATCHMAKING"
 
-[node name="WarBtn" type="Button" parent="ModeButtons" unique_id=798406119]
+[node name="MatchmakingSubLabel" type="Label" parent="ModeButtons/MatchmakingBtn" unique_id=1730958426]
 layout_mode = 0
-offset_left = 1260.0
-offset_top = 10.0
-offset_right = 1640.0
-offset_bottom = 190.0
-theme_override_font_sizes/font_size = 26
-text = "WAR"
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 430.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 18
+text = "PvP (Solo / Duo / Squad)"
+horizontal_alignment = 1

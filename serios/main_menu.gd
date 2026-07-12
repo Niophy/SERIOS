@@ -7,7 +7,7 @@ func _ready() -> void:
 	$ModeButtons/CampaignBtn.pressed.connect(_on_campaign)
 	$ModeButtons/BattleBtn.pressed.connect(_on_battle)
 	$ModeButtons/MatchmakingBtn.pressed.connect(_on_matchmaking)
-	$ModeButtons/WarBtn.pressed.connect(_on_war)
+	$RightColumn/GeneralsBtn.pressed.connect(_on_generals)
 
 func _on_campaign() -> void:
 	Nav.go_to("res://campaign.tscn")
@@ -18,8 +18,8 @@ func _on_battle() -> void:
 func _on_matchmaking() -> void:
 	Nav.go_to("res://matchmaking.tscn")
 
-func _on_war() -> void:
-	Nav.go_to("res://war.tscn")
+func _on_generals() -> void:
+	Nav.go_to("res://generals.tscn")
 
 func _connect_all_buttons(node: Node) -> void:
 	for child in node.get_children():

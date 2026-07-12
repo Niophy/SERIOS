@@ -25,7 +25,7 @@ func _on_back() -> void:
 func _on_castle_selected(card) -> void:
 	print("[SERIOS] CASTLE SELECTED: ", card.name)
 	Nav.payload["castle"] = card.name
-	Nav.go_to("res://battle_overview.tscn")
+	Nav.go_to("res://battle_overview.tscn", Nav.payload)
 
 func _on_filter(rarity: String) -> void:
 	print("[SERIOS] FILTER: ", rarity)

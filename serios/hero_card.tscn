@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bhrocrdscene1"]
+
+[ext_resource type="Script" uid="uid://dhrocrd0scrpt" path="res://hero_card.gd" id="1_hcard"]
+
+[node name="HeroCard" type="Control"]
+custom_minimum_size = Vector2(560, 160)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 560.0
+offset_bottom = 160.0
+script = ExtResource("1_hcard")
+
+[node name="CardFrame" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Portrait" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 140.0
+offset_bottom = 140.0
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 20.0
+offset_right = 540.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 26
+text = "Hero Name"
+
+[node name="TierLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 60.0
+offset_right = 400.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 22
+text = "Epic III"
+
+[node name="TierPipRow" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 95.0
+offset_right = 400.0
+offset_bottom = 115.0
+
+[node name="Pip1" type="Panel" parent="TierPipRow"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="Pip2" type="Panel" parent="TierPipRow"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="Pip3" type="Panel" parent="TierPipRow"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="HeroCardBtn" type="Button" parent="."]
+layout_mode = 0
+offset_right = 560.0
+offset_bottom = 160.0
+flat = true
