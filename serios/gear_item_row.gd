@@ -1,0 +1,38 @@
+# gear_item_row.gd
+extends Control
+
+signal item_tapped(row)
+signal item_held(row)
+
+const HOLD_TIME := 0.5
+
+var item_data := {}
+var _hold_timer: Timer
+
+func _ready() -> void:
+	_hold_timer = Timer.new()
+	_hold_timer.one_shot = true
+	_hold_timer.wait_time = HOLD_TIME
+	_hold_timer.timeout.connect(_on_hold_timeout)
+	add_child(_hold_timer)
+	$RowBtn.button_down.connect(_on_button_down)
+	$RowBtn.button_up.connect(_on_button_up)
+
+func _on_button_down() -> void:
+	_hold_timer.start()
+
+func _on_button_up() -> void:
+	if _hold_timer.time_left > 0:
+		_hold_timer.stop()
+		item_tapped.emit(self)
+
+func _on_hold_timeout() -> void:
+	item_held.emit(self)
+
+func set_item(data: Dictionary) -> void:
+	item_data = data
+	$NameLabel.text = data.get("name", "Item Name")
+	$TierLabel.text = data.get("tier", "Common")
+
+func set_highlighted(is_on: bool) -> void:
+	$HighlightBorder.visible = is_on

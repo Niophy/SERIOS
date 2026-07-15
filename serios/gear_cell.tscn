@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bgrcellscn10"]
+
+[ext_resource type="Script" uid="uid://dgrcell0scrpt" path="res://gear_cell.gd" id="1_gcell"]
+
+[node name="GearCell" type="Control"]
+custom_minimum_size = Vector2(190, 190)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 190.0
+offset_bottom = 190.0
+script = ExtResource("1_gcell")
+
+[node name="CellFrame" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemIcon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 180.0
+offset_bottom = 135.0
+
+[node name="ElementIcon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 46.0
+offset_bottom = 46.0
+
+[node name="TierLabel" type="Label" parent="."]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 190.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 20
+text = "Rare"
+horizontal_alignment = 1
+
+[node name="CellBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="HighlightBorder" type="ReferenceRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+border_color = Color(1, 0.85, 0.3, 1)
+border_width = 4.0
+editor_only = false

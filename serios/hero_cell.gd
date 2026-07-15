@@ -1,0 +1,34 @@
+# hero_cell.gd
+extends Control
+
+signal cell_tapped(cell)
+signal cell_held(cell)
+
+const HOLD_TIME := 0.5
+
+var hero_data := {}
+var _hold_timer: Timer
+
+func _ready() -> void:
+	_hold_timer = Timer.new()
+	_hold_timer.one_shot = true
+	_hold_timer.wait_time = HOLD_TIME
+	_hold_timer.timeout.connect(_on_hold_timeout)
+	add_child(_hold_timer)
+	$CellBtn.button_down.connect(_on_button_down)
+	$CellBtn.button_up.connect(_on_button_up)
+
+func _on_button_down() -> void:
+	_hold_timer.start()
+
+func _on_button_up() -> void:
+	if _hold_timer.time_left > 0:
+		_hold_timer.stop()
+		cell_tapped.emit(self)
+
+func _on_hold_timeout() -> void:
+	cell_held.emit(self)
+
+func set_hero(data: Dictionary) -> void:
+	hero_data = data
+	$TierLabel.text = data.get("tier", "Common I")

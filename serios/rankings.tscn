@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://brnkngsscn15"]
+
+[ext_resource type="Script" uid="uid://drnkngs0scrpt" path="res://rankings.gd" id="1_rank"]
+[ext_resource type="PackedScene" uid="uid://bplrrowscn16" path="res://player_rank_row.tscn" id="2_prow"]
+[ext_resource type="PackedScene" uid="uid://balrrowscn17" path="res://alliance_rank_row.tscn" id="3_arow"]
+
+[node name="Rankings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rank")
+
+[node name="TopBar" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 2532.0
+offset_bottom = 110.0
+
+[node name="BackBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+
+[node name="TitleLabel" type="Label" parent="TopBar"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 25.0
+offset_right = 580.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 46
+text = "RANKINGS"
+
+[node name="MainPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 130.0
+offset_right = 2512.0
+offset_bottom = 1150.0
+
+[node name="PlayersTabBtn" type="Button" parent="MainPanel"]
+layout_mode = 0
+offset_left = 786.0
+offset_top = 20.0
+offset_right = 1236.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "PLAYERS"
+
+[node name="AlliancesTabBtn" type="Button" parent="MainPanel"]
+layout_mode = 0
+offset_left = 1256.0
+offset_top = 20.0
+offset_right = 1706.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "ALLIANCES"
+
+[node name="PlayersPanel" type="Control" parent="MainPanel"]
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 110.0
+offset_right = 2472.0
+offset_bottom = 940.0
+
+[node name="RankHeaderLabel" type="Label" parent="MainPanel/PlayersPanel"]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "RANK"
+horizontal_alignment = 1
+
+[node name="PlayerHeaderLabel" type="Label" parent="MainPanel/PlayersPanel"]
+layout_mode = 0
+offset_left = 140.0
+offset_right = 700.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "PLAYER"
+
+[node name="PowerHeaderLabel" type="Label" parent="MainPanel/PlayersPanel"]
+layout_mode = 0
+offset_left = 800.0
+offset_right = 1300.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "POWER"
+horizontal_alignment = 2
+
+[node name="AllianceHeaderLabel" type="Label" parent="MainPanel/PlayersPanel"]
+layout_mode = 0
+offset_left = 1340.0
+offset_right = 1840.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "ALLIANCE"
+
+[node name="AchievementsHeaderLabel" type="Label" parent="MainPanel/PlayersPanel"]
+layout_mode = 0
+offset_left = 1880.0
+offset_right = 2432.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "ACHIEVEMENTS"
+horizontal_alignment = 1
+
+[node name="PlayerRowList" type="VBoxContainer" parent="MainPanel/PlayersPanel"]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 2452.0
+offset_bottom = 830.0
+theme_override_constants/separation = 5
+
+[node name="PlayerRankRow1" parent="MainPanel/PlayersPanel/PlayerRowList" instance=ExtResource("2_prow")]
+layout_mode = 2
+
+[node name="PlayerRankRow2" parent="MainPanel/PlayersPanel/PlayerRowList" instance=ExtResource("2_prow")]
+layout_mode = 2
+
+[node name="PlayerRankRow3" parent="MainPanel/PlayersPanel/PlayerRowList" instance=ExtResource("2_prow")]
+layout_mode = 2
+
+[node name="PlayerRankRow4" parent="MainPanel/PlayersPanel/PlayerRowList" instance=ExtResource("2_prow")]
+layout_mode = 2
+
+[node name="PlayerRankRow5" parent="MainPanel/PlayersPanel/PlayerRowList" instance=ExtResource("2_prow")]
+layout_mode = 2
+
+[node name="PlayerRankRow6" parent="MainPanel/PlayersPanel/PlayerRowList" instance=ExtResource("2_prow")]
+layout_mode = 2
+
+[node name="PlayerRankRow7" parent="MainPanel/PlayersPanel/PlayerRowList" instance=ExtResource("2_prow")]
+layout_mode = 2
+
+[node name="PlayerRankRow8" parent="MainPanel/PlayersPanel/PlayerRowList" instance=ExtResource("2_prow")]
+layout_mode = 2
+
+[node name="AlliancesPanel" type="Control" parent="MainPanel"]
+visible = false
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 110.0
+offset_right = 2472.0
+offset_bottom = 940.0
+
+[node name="RankHeaderLabel" type="Label" parent="MainPanel/AlliancesPanel"]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "RANK"
+horizontal_alignment = 1
+
+[node name="AllianceHeaderLabel" type="Label" parent="MainPanel/AlliancesPanel"]
+layout_mode = 0
+offset_left = 140.0
+offset_right = 900.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "ALLIANCE"
+
+[node name="PowerHeaderLabel" type="Label" parent="MainPanel/AlliancesPanel"]
+layout_mode = 0
+offset_left = 940.0
+offset_right = 1640.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "TOTAL POWER"
+horizontal_alignment = 2
+
+[node name="MembersHeaderLabel" type="Label" parent="MainPanel/AlliancesPanel"]
+layout_mode = 0
+offset_left = 1680.0
+offset_right = 2432.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "MEMBERS"
+horizontal_alignment = 1
+
+[node name="AllianceRowList" type="VBoxContainer" parent="MainPanel/AlliancesPanel"]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 2452.0
+offset_bottom = 830.0
+theme_override_constants/separation = 5
+
+[node name="AllianceRankRow1" parent="MainPanel/AlliancesPanel/AllianceRowList" instance=ExtResource("3_arow")]
+layout_mode = 2
+
+[node name="AllianceRankRow2" parent="MainPanel/AlliancesPanel/AllianceRowList" instance=ExtResource("3_arow")]
+layout_mode = 2
+
+[node name="AllianceRankRow3" parent="MainPanel/AlliancesPanel/AllianceRowList" instance=ExtResource("3_arow")]
+layout_mode = 2
+
+[node name="AllianceRankRow4" parent="MainPanel/AlliancesPanel/AllianceRowList" instance=ExtResource("3_arow")]
+layout_mode = 2
+
+[node name="AllianceRankRow5" parent="MainPanel/AlliancesPanel/AllianceRowList" instance=ExtResource("3_arow")]
+layout_mode = 2
+
+[node name="AllianceRankRow6" parent="MainPanel/AlliancesPanel/AllianceRowList" instance=ExtResource("3_arow")]
+layout_mode = 2
+
+[node name="AllianceRankRow7" parent="MainPanel/AlliancesPanel/AllianceRowList" instance=ExtResource("3_arow")]
+layout_mode = 2
+
+[node name="AllianceRankRow8" parent="MainPanel/AlliancesPanel/AllianceRowList" instance=ExtResource("3_arow")]
+layout_mode = 2
+
+[node name="FooterLabel" type="Label" parent="MainPanel"]
+layout_mode = 0
+offset_left = 946.0
+offset_top = 960.0
+offset_right = 1546.0
+offset_bottom = 1000.0
+theme_override_font_sizes/font_size = 22
+text = "Rankings update in: 18:45:32"
+horizontal_alignment = 1

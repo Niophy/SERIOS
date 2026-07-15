@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://bgrovrscn12"]
+
+[ext_resource type="Script" uid="uid://dgrovr00scrpt" path="res://gear_overview.gd" id="1_govr"]
+[ext_resource type="PackedScene" uid="uid://bgritrwscene9" path="res://gear_item_row.tscn" id="2_grow"]
+[ext_resource type="PackedScene" uid="uid://bgrviewscn11" path="res://gear_view.tscn" id="3_gview"]
+
+[node name="GearOverview" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_govr")
+
+[node name="TopBar" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 2532.0
+offset_bottom = 100.0
+
+[node name="BackBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+
+[node name="TitleLabel" type="Label" parent="TopBar"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 20.0
+offset_right = 880.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 46
+text = "GENERALS > WEAPON"
+
+[node name="HelpBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 890.0
+offset_top = 20.0
+offset_right = 940.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 26
+text = "?"
+
+[node name="ResourceBar" type="Panel" parent="TopBar"]
+layout_mode = 0
+offset_left = 1820.0
+offset_top = 10.0
+offset_right = 2440.0
+offset_bottom = 90.0
+
+[node name="GoldSlot" type="Panel" parent="TopBar/ResourceBar"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 300.0
+offset_bottom = 70.0
+
+[node name="GoldIcon" type="TextureRect" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="GoldLabel" type="Label" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 235.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Gold 938,250"
+horizontal_alignment = 1
+
+[node name="GoldPlusBtn" type="Button" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 10.0
+offset_right = 290.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="GemSlot" type="Panel" parent="TopBar/ResourceBar"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 10.0
+offset_right = 620.0
+offset_bottom = 70.0
+
+[node name="GemIcon" type="TextureRect" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="GemLabel" type="Label" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 215.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Gems 1,250"
+horizontal_alignment = 1
+
+[node name="GemPlusBtn" type="Button" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 10.0
+offset_right = 270.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="SettingsBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 2452.0
+offset_top = 15.0
+offset_right = 2512.0
+offset_bottom = 85.0
+
+[node name="ItemsList" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 120.0
+offset_right = 620.0
+offset_bottom = 1150.0
+
+[node name="SlotHeaderBtn" type="Button" parent="ItemsList"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 580.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 24
+text = "ALL WEAPONS"
+
+[node name="OwnedLabel" type="Label" parent="ItemsList"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 95.0
+offset_right = 580.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 22
+text = "Owned: 28 / 64"
+
+[node name="ItemScroll" type="ScrollContainer" parent="ItemsList"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 150.0
+offset_right = 580.0
+offset_bottom = 1010.0
+
+[node name="ItemList" type="VBoxContainer" parent="ItemsList/ItemScroll"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="GearItemRow1" parent="ItemsList/ItemScroll/ItemList" instance=ExtResource("2_grow")]
+layout_mode = 2
+
+[node name="GearItemRow2" parent="ItemsList/ItemScroll/ItemList" instance=ExtResource("2_grow")]
+layout_mode = 2
+
+[node name="GearItemRow3" parent="ItemsList/ItemScroll/ItemList" instance=ExtResource("2_grow")]
+layout_mode = 2
+
+[node name="GearItemRow4" parent="ItemsList/ItemScroll/ItemList" instance=ExtResource("2_grow")]
+layout_mode = 2
+
+[node name="GearItemRow5" parent="ItemsList/ItemScroll/ItemList" instance=ExtResource("2_grow")]
+layout_mode = 2
+
+[node name="GearItemRow6" parent="ItemsList/ItemScroll/ItemList" instance=ExtResource("2_grow")]
+layout_mode = 2
+
+[node name="GearItemRow7" parent="ItemsList/ItemScroll/ItemList" instance=ExtResource("2_grow")]
+layout_mode = 2
+
+[node name="GearItemRow8" parent="ItemsList/ItemScroll/ItemList" instance=ExtResource("2_grow")]
+layout_mode = 2
+
+[node name="DimBackdrop" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 2532.0
+offset_bottom = 1170.0
+color = Color(0, 0, 0, 0.6)
+
+[node name="GearView" parent="." instance=ExtResource("3_gview")]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 135.0
+offset_right = 2116.0
+offset_bottom = 1135.0

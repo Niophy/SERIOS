@@ -1,0 +1,1130 @@
+[gd_scene format=3 uid="uid://buproflscene4"]
+
+[ext_resource type="Script" uid="uid://duprofl0scrpt" path="res://user_profile.gd" id="1_uprof"]
+[ext_resource type="PackedScene" uid="uid://bhrcellscn18" path="res://hero_cell.tscn" id="2_hcell"]
+
+[node name="UserProfile" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uprof")
+
+[node name="TopBar" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 2532.0
+offset_bottom = 110.0
+
+[node name="BackBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+
+[node name="TitleLabel" type="Label" parent="TopBar"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 25.0
+offset_right = 680.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 46
+text = "USER PROFILE"
+
+[node name="SettingsBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 2442.0
+offset_top = 20.0
+offset_right = 2512.0
+offset_bottom = 90.0
+
+[node name="IdentityPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 130.0
+offset_right = 660.0
+offset_bottom = 1050.0
+
+[node name="Portrait" type="TextureRect" parent="IdentityPanel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 540.0
+offset_bottom = 500.0
+
+[node name="LevelBadge" type="Label" parent="IdentityPanel"]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 510.0
+offset_right = 360.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 40
+text = "78"
+horizontal_alignment = 1
+
+[node name="XPLabel" type="Label" parent="IdentityPanel"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 580.0
+offset_right = 510.0
+offset_bottom = 612.0
+theme_override_font_sizes/font_size = 22
+text = "12,580 / 25,000 XP"
+horizontal_alignment = 1
+
+[node name="XPBar" type="ProgressBar" parent="IdentityPanel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 620.0
+offset_right = 540.0
+offset_bottom = 644.0
+value = 50.0
+
+[node name="RenownPanel" type="Panel" parent="IdentityPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 670.0
+offset_right = 590.0
+offset_bottom = 740.0
+
+[node name="RenownIcon" type="TextureRect" parent="IdentityPanel/RenownPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 55.0
+offset_bottom = 55.0
+
+[node name="RenownLabel" type="Label" parent="IdentityPanel/RenownPanel"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 15.0
+offset_right = 270.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 26
+text = "Renown"
+
+[node name="RenownValueLabel" type="Label" parent="IdentityPanel/RenownPanel"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 15.0
+offset_right = 540.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 26
+text = "18,560"
+horizontal_alignment = 2
+
+[node name="OnlinePanel" type="Panel" parent="IdentityPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 760.0
+offset_right = 590.0
+offset_bottom = 910.0
+
+[node name="OnlineThumb" type="TextureRect" parent="IdentityPanel/OnlinePanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 135.0
+offset_bottom = 135.0
+
+[node name="OnlineLabel" type="Label" parent="IdentityPanel/OnlinePanel"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 25.0
+offset_right = 400.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "Online"
+
+[node name="LastSeenLabel" type="Label" parent="IdentityPanel/OnlinePanel"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 70.0
+offset_right = 530.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 22
+text = "Last seen: Just now"
+
+[node name="IdentityInfoPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 130.0
+offset_right = 1560.0
+offset_bottom = 750.0
+
+[node name="PlayerNameLabel" type="Label" parent="IdentityInfoPanel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 440.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 44
+text = "Jaber"
+
+[node name="EditNameBtn" type="Button" parent="IdentityInfoPanel"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 30.0
+offset_right = 510.0
+offset_bottom = 90.0
+
+[node name="WarlordTitleLabel" type="Label" parent="IdentityInfoPanel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 95.0
+offset_right = 340.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 28
+text = "Warlord"
+
+[node name="MottoLabel" type="Label" parent="IdentityInfoPanel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 145.0
+offset_right = 540.0
+offset_bottom = 181.0
+theme_override_font_sizes/font_size = 24
+text = "Let honor guide the blade."
+
+[node name="AlliancePanel" type="Panel" parent="IdentityInfoPanel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 210.0
+offset_right = 440.0
+offset_bottom = 320.0
+
+[node name="AllianceIcon" type="TextureRect" parent="IdentityInfoPanel/AlliancePanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 25.0
+offset_right = 80.0
+offset_bottom = 85.0
+
+[node name="AllianceCaptionLabel" type="Label" parent="IdentityInfoPanel/AlliancePanel"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 20.0
+offset_right = 295.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 20
+text = "Alliance"
+
+[node name="AllianceNameLabel" type="Label" parent="IdentityInfoPanel/AlliancePanel"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 52.0
+offset_right = 395.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 28
+text = "IRON OATH"
+
+[node name="AllianceBtn" type="Button" parent="IdentityInfoPanel/AlliancePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="AllianceRolePanel" type="Panel" parent="IdentityInfoPanel"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 210.0
+offset_right = 860.0
+offset_bottom = 320.0
+
+[node name="RoleIcon" type="TextureRect" parent="IdentityInfoPanel/AllianceRolePanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 25.0
+offset_right = 80.0
+offset_bottom = 85.0
+
+[node name="RoleCaptionLabel" type="Label" parent="IdentityInfoPanel/AllianceRolePanel"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 20.0
+offset_right = 295.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 20
+text = "Alliance Role"
+
+[node name="RoleNameLabel" type="Label" parent="IdentityInfoPanel/AllianceRolePanel"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 52.0
+offset_right = 395.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 28
+text = "Commander"
+
+[node name="RankingPanel" type="Panel" parent="IdentityInfoPanel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 350.0
+offset_right = 840.0
+offset_bottom = 580.0
+
+[node name="RankIcon" type="TextureRect" parent="IdentityInfoPanel/RankingPanel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 55.0
+offset_right = 160.0
+offset_bottom = 175.0
+
+[node name="RankingHeaderLabel" type="Label" parent="IdentityInfoPanel/RankingPanel"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 40.0
+offset_right = 500.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 32
+text = "RANKING"
+
+[node name="GlobalRankLabel" type="Label" parent="IdentityInfoPanel/RankingPanel"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 105.0
+offset_right = 460.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 24
+text = "Global Rank"
+
+[node name="GlobalRankValue" type="Label" parent="IdentityInfoPanel/RankingPanel"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 145.0
+offset_right = 460.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 36
+text = "#1,248"
+
+[node name="ServerRankLabel" type="Label" parent="IdentityInfoPanel/RankingPanel"]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 105.0
+offset_right = 760.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 24
+text = "Server Rank"
+
+[node name="ServerRankValue" type="Label" parent="IdentityInfoPanel/RankingPanel"]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 145.0
+offset_right = 760.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 36
+text = "#73"
+
+[node name="RankingBtn" type="Button" parent="IdentityInfoPanel/RankingPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="BattleRecordPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 770.0
+offset_right = 1560.0
+offset_bottom = 1050.0
+
+[node name="BattleRecordHeaderLabel" type="Label" parent="BattleRecordPanel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 440.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 30
+text = "BATTLE RECORD"
+
+[node name="SoloRecord" type="Control" parent="BattleRecordPanel"]
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 70.0
+offset_right = 230.0
+offset_bottom = 260.0
+
+[node name="ColHeaderLabel" type="Label" parent="BattleRecordPanel/SoloRecord"]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 18
+text = "SOLO WINS"
+horizontal_alignment = 1
+
+[node name="ColIcon" type="TextureRect" parent="BattleRecordPanel/SoloRecord"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 35.0
+offset_right = 130.0
+offset_bottom = 105.0
+
+[node name="WinsValueLabel" type="Label" parent="BattleRecordPanel/SoloRecord"]
+layout_mode = 0
+offset_top = 115.0
+offset_right = 190.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 30
+text = "2,845"
+horizontal_alignment = 1
+
+[node name="WinRateLabel" type="Label" parent="BattleRecordPanel/SoloRecord"]
+layout_mode = 0
+offset_top = 158.0
+offset_right = 190.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 18
+text = "Win Rate: 68%"
+horizontal_alignment = 1
+
+[node name="DuoRecord" type="Control" parent="BattleRecordPanel"]
+anchors_preset = 0
+offset_left = 250.0
+offset_top = 70.0
+offset_right = 440.0
+offset_bottom = 260.0
+
+[node name="ColHeaderLabel" type="Label" parent="BattleRecordPanel/DuoRecord"]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 18
+text = "DUO WINS"
+horizontal_alignment = 1
+
+[node name="ColIcon" type="TextureRect" parent="BattleRecordPanel/DuoRecord"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 35.0
+offset_right = 130.0
+offset_bottom = 105.0
+
+[node name="WinsValueLabel" type="Label" parent="BattleRecordPanel/DuoRecord"]
+layout_mode = 0
+offset_top = 115.0
+offset_right = 190.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 30
+text = "1,326"
+horizontal_alignment = 1
+
+[node name="WinRateLabel" type="Label" parent="BattleRecordPanel/DuoRecord"]
+layout_mode = 0
+offset_top = 158.0
+offset_right = 190.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 18
+text = "Win Rate: 64%"
+horizontal_alignment = 1
+
+[node name="QuadRecord" type="Control" parent="BattleRecordPanel"]
+anchors_preset = 0
+offset_left = 460.0
+offset_top = 70.0
+offset_right = 650.0
+offset_bottom = 260.0
+
+[node name="ColHeaderLabel" type="Label" parent="BattleRecordPanel/QuadRecord"]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 18
+text = "QUAD WINS"
+horizontal_alignment = 1
+
+[node name="ColIcon" type="TextureRect" parent="BattleRecordPanel/QuadRecord"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 35.0
+offset_right = 130.0
+offset_bottom = 105.0
+
+[node name="WinsValueLabel" type="Label" parent="BattleRecordPanel/QuadRecord"]
+layout_mode = 0
+offset_top = 115.0
+offset_right = 190.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 30
+text = "892"
+horizontal_alignment = 1
+
+[node name="WinRateLabel" type="Label" parent="BattleRecordPanel/QuadRecord"]
+layout_mode = 0
+offset_top = 158.0
+offset_right = 190.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 18
+text = "Win Rate: 61%"
+horizontal_alignment = 1
+
+[node name="WarRecord" type="Control" parent="BattleRecordPanel"]
+anchors_preset = 0
+offset_left = 670.0
+offset_top = 70.0
+offset_right = 860.0
+offset_bottom = 260.0
+
+[node name="ColHeaderLabel" type="Label" parent="BattleRecordPanel/WarRecord"]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 16
+text = "ALLIANCE / WAR WINS"
+horizontal_alignment = 1
+
+[node name="ColIcon" type="TextureRect" parent="BattleRecordPanel/WarRecord"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 35.0
+offset_right = 130.0
+offset_bottom = 105.0
+
+[node name="WinsValueLabel" type="Label" parent="BattleRecordPanel/WarRecord"]
+layout_mode = 0
+offset_top = 115.0
+offset_right = 190.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 30
+text = "426"
+horizontal_alignment = 1
+
+[node name="WinRateLabel" type="Label" parent="BattleRecordPanel/WarRecord"]
+layout_mode = 0
+offset_top = 158.0
+offset_right = 190.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 18
+text = "Win Rate: 59%"
+horizontal_alignment = 1
+
+[node name="MostPlayedPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1580.0
+offset_top = 130.0
+offset_right = 2492.0
+offset_bottom = 490.0
+
+[node name="MostPlayedHeaderLabel" type="Label" parent="MostPlayedPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 530.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 30
+text = "MOST PLAYED HEROES"
+
+[node name="HeroMini1" type="Control" parent="MostPlayedPanel"]
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 85.0
+offset_right = 225.0
+offset_bottom = 345.0
+
+[node name="Portrait" type="TextureRect" parent="MostPlayedPanel/HeroMini1"]
+layout_mode = 0
+offset_right = 195.0
+offset_bottom = 195.0
+
+[node name="RankBadge" type="Label" parent="MostPlayedPanel/HeroMini1"]
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 26
+text = "1"
+horizontal_alignment = 1
+
+[node name="ElementIcon" type="TextureRect" parent="MostPlayedPanel/HeroMini1"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 170.0
+offset_right = 120.0
+offset_bottom = 215.0
+
+[node name="TierLabel" type="Label" parent="MostPlayedPanel/HeroMini1"]
+layout_mode = 0
+offset_top = 218.0
+offset_right = 195.0
+offset_bottom = 246.0
+theme_override_font_sizes/font_size = 20
+text = "Epic III"
+horizontal_alignment = 1
+
+[node name="TierPipRow" type="HBoxContainer" parent="MostPlayedPanel/HeroMini1"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 246.0
+offset_right = 128.0
+offset_bottom = 258.0
+
+[node name="Pip1" type="Panel" parent="MostPlayedPanel/HeroMini1/TierPipRow"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+
+[node name="Pip2" type="Panel" parent="MostPlayedPanel/HeroMini1/TierPipRow"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+
+[node name="Pip3" type="Panel" parent="MostPlayedPanel/HeroMini1/TierPipRow"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+
+[node name="HeroMini2" type="Control" parent="MostPlayedPanel"]
+anchors_preset = 0
+offset_left = 255.0
+offset_top = 85.0
+offset_right = 450.0
+offset_bottom = 345.0
+
+[node name="Portrait" type="TextureRect" parent="MostPlayedPanel/HeroMini2"]
+layout_mode = 0
+offset_right = 195.0
+offset_bottom = 195.0
+
+[node name="RankBadge" type="Label" parent="MostPlayedPanel/HeroMini2"]
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 26
+text = "2"
+horizontal_alignment = 1
+
+[node name="ElementIcon" type="TextureRect" parent="MostPlayedPanel/HeroMini2"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 170.0
+offset_right = 120.0
+offset_bottom = 215.0
+
+[node name="TierLabel" type="Label" parent="MostPlayedPanel/HeroMini2"]
+layout_mode = 0
+offset_top = 218.0
+offset_right = 195.0
+offset_bottom = 246.0
+theme_override_font_sizes/font_size = 20
+text = "Epic I"
+horizontal_alignment = 1
+
+[node name="TierPipRow" type="HBoxContainer" parent="MostPlayedPanel/HeroMini2"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 246.0
+offset_right = 128.0
+offset_bottom = 258.0
+
+[node name="Pip1" type="Panel" parent="MostPlayedPanel/HeroMini2/TierPipRow"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+
+[node name="HeroMini3" type="Control" parent="MostPlayedPanel"]
+anchors_preset = 0
+offset_left = 480.0
+offset_top = 85.0
+offset_right = 675.0
+offset_bottom = 345.0
+
+[node name="Portrait" type="TextureRect" parent="MostPlayedPanel/HeroMini3"]
+layout_mode = 0
+offset_right = 195.0
+offset_bottom = 195.0
+
+[node name="RankBadge" type="Label" parent="MostPlayedPanel/HeroMini3"]
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 26
+text = "3"
+horizontal_alignment = 1
+
+[node name="ElementIcon" type="TextureRect" parent="MostPlayedPanel/HeroMini3"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 170.0
+offset_right = 120.0
+offset_bottom = 215.0
+
+[node name="TierLabel" type="Label" parent="MostPlayedPanel/HeroMini3"]
+layout_mode = 0
+offset_top = 218.0
+offset_right = 195.0
+offset_bottom = 246.0
+theme_override_font_sizes/font_size = 20
+text = "Rare III"
+horizontal_alignment = 1
+
+[node name="TierPipRow" type="HBoxContainer" parent="MostPlayedPanel/HeroMini3"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 246.0
+offset_right = 128.0
+offset_bottom = 258.0
+
+[node name="Pip1" type="Panel" parent="MostPlayedPanel/HeroMini3/TierPipRow"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+
+[node name="Pip2" type="Panel" parent="MostPlayedPanel/HeroMini3/TierPipRow"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+
+[node name="Pip3" type="Panel" parent="MostPlayedPanel/HeroMini3/TierPipRow"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+
+[node name="HeroMini4" type="Control" parent="MostPlayedPanel"]
+anchors_preset = 0
+offset_left = 705.0
+offset_top = 85.0
+offset_right = 900.0
+offset_bottom = 345.0
+
+[node name="Portrait" type="TextureRect" parent="MostPlayedPanel/HeroMini4"]
+layout_mode = 0
+offset_right = 195.0
+offset_bottom = 195.0
+
+[node name="RankBadge" type="Label" parent="MostPlayedPanel/HeroMini4"]
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 26
+text = "4"
+horizontal_alignment = 1
+
+[node name="ElementIcon" type="TextureRect" parent="MostPlayedPanel/HeroMini4"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 170.0
+offset_right = 120.0
+offset_bottom = 215.0
+
+[node name="TierLabel" type="Label" parent="MostPlayedPanel/HeroMini4"]
+layout_mode = 0
+offset_top = 218.0
+offset_right = 195.0
+offset_bottom = 246.0
+theme_override_font_sizes/font_size = 20
+text = "Rare II"
+horizontal_alignment = 1
+
+[node name="TierPipRow" type="HBoxContainer" parent="MostPlayedPanel/HeroMini4"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 246.0
+offset_right = 128.0
+offset_bottom = 258.0
+
+[node name="Pip1" type="Panel" parent="MostPlayedPanel/HeroMini4/TierPipRow"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+
+[node name="Pip2" type="Panel" parent="MostPlayedPanel/HeroMini4/TierPipRow"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+
+[node name="AchievementsPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1580.0
+offset_top = 510.0
+offset_right = 2492.0
+offset_bottom = 760.0
+
+[node name="AchievementsHeaderLabel" type="Label" parent="AchievementsPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 430.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 30
+text = "ACHIEVEMENTS"
+
+[node name="ViewAllBtn" type="Button" parent="AchievementsPanel"]
+layout_mode = 0
+offset_left = 702.0
+offset_top = 15.0
+offset_right = 882.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 22
+text = "View All"
+
+[node name="AchieveBadge1" type="Control" parent="AchievementsPanel"]
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 85.0
+offset_right = 170.0
+offset_bottom = 220.0
+
+[node name="BadgeIcon" type="TextureRect" parent="AchievementsPanel/AchieveBadge1"]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 115.0
+offset_bottom = 90.0
+
+[node name="CountLabel" type="Label" parent="AchievementsPanel/AchieveBadge1"]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 140.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 22
+text = "512"
+horizontal_alignment = 1
+
+[node name="AchieveBadge2" type="Control" parent="AchievementsPanel"]
+anchors_preset = 0
+offset_left = 205.0
+offset_top = 85.0
+offset_right = 345.0
+offset_bottom = 220.0
+
+[node name="BadgeIcon" type="TextureRect" parent="AchievementsPanel/AchieveBadge2"]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 115.0
+offset_bottom = 90.0
+
+[node name="CountLabel" type="Label" parent="AchievementsPanel/AchieveBadge2"]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 140.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 22
+text = "128"
+horizontal_alignment = 1
+
+[node name="AchieveBadge3" type="Control" parent="AchievementsPanel"]
+anchors_preset = 0
+offset_left = 380.0
+offset_top = 85.0
+offset_right = 520.0
+offset_bottom = 220.0
+
+[node name="BadgeIcon" type="TextureRect" parent="AchievementsPanel/AchieveBadge3"]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 115.0
+offset_bottom = 90.0
+
+[node name="CountLabel" type="Label" parent="AchievementsPanel/AchieveBadge3"]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 140.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 22
+text = "87"
+horizontal_alignment = 1
+
+[node name="AchieveBadge4" type="Control" parent="AchievementsPanel"]
+anchors_preset = 0
+offset_left = 555.0
+offset_top = 85.0
+offset_right = 695.0
+offset_bottom = 220.0
+
+[node name="BadgeIcon" type="TextureRect" parent="AchievementsPanel/AchieveBadge4"]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 115.0
+offset_bottom = 90.0
+
+[node name="CountLabel" type="Label" parent="AchievementsPanel/AchieveBadge4"]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 140.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 22
+text = "36"
+horizontal_alignment = 1
+
+[node name="AchieveBadge5" type="Control" parent="AchievementsPanel"]
+anchors_preset = 0
+offset_left = 730.0
+offset_top = 85.0
+offset_right = 870.0
+offset_bottom = 220.0
+
+[node name="BadgeIcon" type="TextureRect" parent="AchievementsPanel/AchieveBadge5"]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 115.0
+offset_bottom = 90.0
+
+[node name="CountLabel" type="Label" parent="AchievementsPanel/AchieveBadge5"]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 140.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 22
+text = "7"
+horizontal_alignment = 1
+
+[node name="StatsPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1580.0
+offset_top = 780.0
+offset_right = 2492.0
+offset_bottom = 1050.0
+
+[node name="TotalBattlesIcon" type="TextureRect" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 66.0
+offset_bottom = 66.0
+
+[node name="TotalBattlesLabel" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 30.0
+offset_right = 320.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 22
+text = "Total Battles"
+
+[node name="TotalBattlesValue" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 30.0
+offset_right = 460.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 22
+text = "6,214"
+horizontal_alignment = 2
+
+[node name="TotalWinsIcon" type="TextureRect" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 110.0
+offset_right = 66.0
+offset_bottom = 146.0
+
+[node name="TotalWinsLabel" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 110.0
+offset_right = 320.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 22
+text = "Total Wins"
+
+[node name="TotalWinsValue" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 110.0
+offset_right = 460.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 22
+text = "3,489"
+horizontal_alignment = 2
+
+[node name="WinRateIcon" type="TextureRect" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 190.0
+offset_right = 66.0
+offset_bottom = 226.0
+
+[node name="WinRateLabel" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 190.0
+offset_right = 320.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 22
+text = "Win Rate"
+
+[node name="WinRateValue" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 190.0
+offset_right = 460.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 22
+text = "56%"
+horizontal_alignment = 2
+
+[node name="FavoriteHeroIcon" type="TextureRect" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 30.0
+offset_right = 516.0
+offset_bottom = 66.0
+
+[node name="FavoriteHeroLabel" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 30.0
+offset_right = 760.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 22
+text = "Favorite Hero"
+
+[node name="FavoriteHeroValue" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 30.0
+offset_right = 900.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 22
+text = "Warden"
+horizontal_alignment = 2
+
+[node name="WinStreakIcon" type="TextureRect" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 110.0
+offset_right = 516.0
+offset_bottom = 146.0
+
+[node name="WinStreakLabel" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 110.0
+offset_right = 760.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 22
+text = "Longest Win Streak"
+
+[node name="WinStreakValue" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 110.0
+offset_right = 900.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 22
+text = "11"
+horizontal_alignment = 2
+
+[node name="AccountCreatedIcon" type="TextureRect" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 190.0
+offset_right = 516.0
+offset_bottom = 226.0
+
+[node name="AccountCreatedLabel" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 190.0
+offset_right = 760.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 22
+text = "Account Created"
+
+[node name="AccountCreatedValue" type="Label" parent="StatsPanel"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 190.0
+offset_right = 900.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 22
+text = "2024-08-12"
+horizontal_alignment = 2
+
+[node name="HeroesPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = 130.0
+offset_right = 2492.0
+offset_bottom = 1050.0
+
+[node name="HeroesHeaderLabel" type="Label" parent="HeroesPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 430.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 30
+text = "HEROES"
+
+[node name="UnlockedCountLabel" type="Label" parent="HeroesPanel"]
+layout_mode = 0
+offset_left = 2100.0
+offset_top = 25.0
+offset_right = 2420.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 24
+text = "Unlocked: 6"
+horizontal_alignment = 2
+
+[node name="HeroCellScroll" type="ScrollContainer" parent="HeroesPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 80.0
+offset_right = 2422.0
+offset_bottom = 890.0
+
+[node name="HeroCellGrid" type="GridContainer" parent="HeroesPanel/HeroCellScroll"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 11
+
+[node name="HeroCell1" parent="HeroesPanel/HeroCellScroll/HeroCellGrid" instance=ExtResource("2_hcell")]
+layout_mode = 2
+
+[node name="HeroCell2" parent="HeroesPanel/HeroCellScroll/HeroCellGrid" instance=ExtResource("2_hcell")]
+layout_mode = 2
+
+[node name="HeroCell3" parent="HeroesPanel/HeroCellScroll/HeroCellGrid" instance=ExtResource("2_hcell")]
+layout_mode = 2
+
+[node name="HeroCell4" parent="HeroesPanel/HeroCellScroll/HeroCellGrid" instance=ExtResource("2_hcell")]
+layout_mode = 2
+
+[node name="HeroCell5" parent="HeroesPanel/HeroCellScroll/HeroCellGrid" instance=ExtResource("2_hcell")]
+layout_mode = 2
+
+[node name="HeroCell6" parent="HeroesPanel/HeroCellScroll/HeroCellGrid" instance=ExtResource("2_hcell")]
+layout_mode = 2
+
+[node name="TabBar" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 1070.0
+offset_right = 2532.0
+offset_bottom = 1170.0
+
+[node name="ProfileTabBtn" type="Button" parent="TabBar"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 10.0
+offset_right = 620.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "PROFILE"
+
+[node name="HeroesTabBtn" type="Button" parent="TabBar"]
+layout_mode = 0
+offset_left = 664.0
+offset_top = 10.0
+offset_right = 1244.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "HEROES"
+
+[node name="TitlesTabBtn" type="Button" parent="TabBar"]
+layout_mode = 0
+offset_left = 1288.0
+offset_top = 10.0
+offset_right = 1868.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "TITLES"
+
+[node name="StatisticsTabBtn" type="Button" parent="TabBar"]
+layout_mode = 0
+offset_left = 1912.0
+offset_top = 10.0
+offset_right = 2492.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "STATISTICS"

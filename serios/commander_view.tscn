@@ -1,0 +1,423 @@
+[gd_scene format=3 uid="uid://bcmdvwscn14"]
+
+[ext_resource type="Script" uid="uid://dcmdvw00scrpt" path="res://commander_view.gd" id="1_cview"]
+
+[node name="CommanderView" type="Panel"]
+custom_minimum_size = Vector2(1700, 1000)
+offset_right = 1700.0
+offset_bottom = 1000.0
+script = ExtResource("1_cview")
+
+[node name="CloseBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1620.0
+offset_top = 20.0
+offset_right = 1680.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 26
+text = "X"
+
+[node name="DisplayZone" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 960.0
+offset_bottom = 980.0
+
+[node name="NameLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 720.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 40
+text = "LADY ZHEN"
+
+[node name="ElementIcon" type="TextureRect" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 90.0
+offset_right = 80.0
+offset_bottom = 150.0
+
+[node name="ElementNameLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 90.0
+offset_right = 395.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 28
+text = "SHADOW"
+
+[node name="ElementCaptionLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 130.0
+offset_right = 295.0
+offset_bottom = 156.0
+theme_override_font_sizes/font_size = 18
+text = "Element"
+
+[node name="RoleIcon" type="TextureRect" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 175.0
+offset_right = 80.0
+offset_bottom = 235.0
+
+[node name="RoleNameLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 175.0
+offset_right = 395.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 28
+text = "VANGUARD"
+
+[node name="RoleCaptionLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 215.0
+offset_right = 295.0
+offset_bottom = 241.0
+theme_override_font_sizes/font_size = 18
+text = "Role"
+
+[node name="RoleDescLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 245.0
+offset_right = 395.0
+offset_bottom = 271.0
+theme_override_font_sizes/font_size = 18
+text = "Frontline Disruptor"
+
+[node name="Portrait" type="TextureRect" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 120.0
+offset_right = 860.0
+offset_bottom = 680.0
+
+[node name="LevelBadge" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 800.0
+offset_right = 100.0
+offset_bottom = 880.0
+theme_override_font_sizes/font_size = 36
+text = "18"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelXPLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 790.0
+offset_right = 580.0
+offset_bottom = 818.0
+theme_override_font_sizes/font_size = 20
+text = "2,450 / 6,000"
+horizontal_alignment = 1
+
+[node name="LevelBar" type="ProgressBar" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 822.0
+offset_right = 580.0
+offset_bottom = 846.0
+value = 41.0
+
+[node name="UnlockNoteLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 855.0
+offset_right = 720.0
+offset_bottom = 883.0
+theme_override_font_sizes/font_size = 18
+text = "Attributes unlock at Lv. 1 / 5 / 10 · Booster at Lv. 20"
+
+[node name="MaxLevelLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 890.0
+offset_right = 420.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 18
+text = "Max Level: 20"
+
+[node name="AttributesZone" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 1000.0
+offset_top = 20.0
+offset_right = 1680.0
+offset_bottom = 980.0
+
+[node name="AttributesHeaderLabel" type="Label" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 460.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 26
+text = "COMMANDER ATTRIBUTES"
+
+[node name="AttributeCard1" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 55.0
+offset_right = 670.0
+offset_bottom = 185.0
+
+[node name="AttrIcon" type="TextureRect" parent="AttributesZone/AttributeCard1"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 30.0
+offset_right = 85.0
+offset_bottom = 100.0
+
+[node name="AttrNameLabel" type="Label" parent="AttributesZone/AttributeCard1"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 15.0
+offset_right = 440.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 22
+text = "Melee Attack Bonus"
+
+[node name="AttrDescLabel" type="Label" parent="AttributesZone/AttributeCard1"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 48.0
+offset_right = 480.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 16
+text = "Increases Melee troops' Attack."
+autowrap_mode = 3
+
+[node name="AttrUnlockLabel" type="Label" parent="AttributesZone/AttributeCard1"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 340.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 16
+text = "Unlocked at Lv. 1"
+
+[node name="AttrValueLabel" type="Label" parent="AttributesZone/AttributeCard1"]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 45.0
+offset_right = 645.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 30
+text = "+24.0%"
+horizontal_alignment = 2
+
+[node name="AttributeCard2" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 200.0
+offset_right = 670.0
+offset_bottom = 330.0
+
+[node name="AttrIcon" type="TextureRect" parent="AttributesZone/AttributeCard2"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 30.0
+offset_right = 85.0
+offset_bottom = 100.0
+
+[node name="AttrNameLabel" type="Label" parent="AttributesZone/AttributeCard2"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 15.0
+offset_right = 440.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 22
+text = "Troop March Speed"
+
+[node name="AttrDescLabel" type="Label" parent="AttributesZone/AttributeCard2"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 48.0
+offset_right = 480.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 16
+text = "Increases the movement speed of all allied troops."
+autowrap_mode = 3
+
+[node name="AttrUnlockLabel" type="Label" parent="AttributesZone/AttributeCard2"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 340.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 16
+text = "Unlocked at Lv. 5"
+
+[node name="AttrValueLabel" type="Label" parent="AttributesZone/AttributeCard2"]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 45.0
+offset_right = 645.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 30
+text = "+15.0%"
+horizontal_alignment = 2
+
+[node name="AttributeCard3" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 345.0
+offset_right = 670.0
+offset_bottom = 475.0
+
+[node name="AttrIcon" type="TextureRect" parent="AttributesZone/AttributeCard3"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 30.0
+offset_right = 85.0
+offset_bottom = 100.0
+
+[node name="AttrNameLabel" type="Label" parent="AttributesZone/AttributeCard3"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 15.0
+offset_right = 440.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 22
+text = "Trap Dismantle Chance"
+
+[node name="AttrDescLabel" type="Label" parent="AttributesZone/AttributeCard3"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 48.0
+offset_right = 480.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 16
+text = "Gives a chance to dismantle enemy traps when triggered."
+autowrap_mode = 3
+
+[node name="AttrUnlockLabel" type="Label" parent="AttributesZone/AttributeCard3"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 340.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 16
+text = "Unlocked at Lv. 10"
+
+[node name="AttrValueLabel" type="Label" parent="AttributesZone/AttributeCard3"]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 45.0
+offset_right = 645.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 30
+text = "+18.0%"
+horizontal_alignment = 2
+
+[node name="NextLevelHeaderLabel" type="Label" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 495.0
+offset_right = 410.0
+offset_bottom = 527.0
+theme_override_font_sizes/font_size = 24
+text = "NEXT LEVEL PREVIEW"
+
+[node name="NextLevelCard" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 535.0
+offset_right = 670.0
+offset_bottom = 599.0
+
+[node name="NextLevelLabel" type="Label" parent="AttributesZone/NextLevelCard"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 130.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 22
+text = "Lv. 19"
+
+[node name="NextAttrLabel" type="Label" parent="AttributesZone/NextLevelCard"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 15.0
+offset_right = 490.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 22
+text = "Melee Attack Bonus"
+
+[node name="NextValueLabel" type="Label" parent="AttributesZone/NextLevelCard"]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 15.0
+offset_right = 640.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 22
+text = "+26.0%"
+horizontal_alignment = 2
+
+[node name="ElementHeaderLabel" type="Label" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 625.0
+offset_right = 310.0
+offset_bottom = 657.0
+theme_override_font_sizes/font_size = 24
+text = "ELEMENT"
+
+[node name="ElementCard" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 665.0
+offset_right = 670.0
+offset_bottom = 775.0
+
+[node name="ElemIcon" type="TextureRect" parent="AttributesZone/ElementCard"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 22.0
+offset_right = 81.0
+offset_bottom = 88.0
+
+[node name="ElemNameLabel" type="Label" parent="AttributesZone/ElementCard"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 12.0
+offset_right = 345.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 24
+text = "SHADOW"
+
+[node name="ElemSuperiorLabel" type="Label" parent="AttributesZone/ElementCard"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 48.0
+offset_right = 445.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 17
+text = "Superior vs: Earth"
+
+[node name="ElemWeakLabel" type="Label" parent="AttributesZone/ElementCard"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 76.0
+offset_right = 445.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 17
+text = "Weak vs: Light"
+
+[node name="FlavorLabel" type="Label" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 800.0
+offset_right = 670.0
+offset_bottom = 870.0
+theme_override_font_sizes/font_size = 16
+text = "A brilliant strategist and relentless leader, Lady Zhen turns the flow of battle with calculated disruption."
+autowrap_mode = 3

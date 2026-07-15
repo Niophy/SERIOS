@@ -115,19 +115,19 @@ func _on_attributes_tab() -> void:
 	$RightPanel/AttributesPanel.visible = true
 
 func _on_commander_slot(slot) -> void:
-	Nav.go_to("res://generals_stub.tscn", {"section": "Commander — " + str(slot.name)})
+	Nav.go_to("res://commander_overview.tscn", {"slot": str(slot.name)})
 
 func _on_commanders_info() -> void:
 	print("[SERIOS] CLICK: InfoBtn — commanders info (not built)")
 
 func _on_manage_commanders() -> void:
-	Nav.go_to("res://generals_stub.tscn", {"section": "Manage Commanders"})
+	Nav.go_to("res://commander_selection.tscn")
 
 func _on_gear_slot(slot) -> void:
-	Nav.go_to("res://generals_stub.tscn", {"section": "Gear — " + slot.get_label()})
+	Nav.go_to("res://gear_overview.tscn", {"slot": slot.get_label()})
 
 func _on_manage_gear() -> void:
-	Nav.go_to("res://generals_stub.tscn", {"section": "Manage Gear"})
+	Nav.go_to("res://gear_manage.tscn")
 
 func _on_skill_slot(slot) -> void:
 	Nav.go_to("res://generals_stub.tscn", {"section": "Skill — " + slot.get_label()})

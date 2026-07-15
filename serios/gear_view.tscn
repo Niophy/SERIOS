@@ -1,0 +1,543 @@
+[gd_scene format=3 uid="uid://bgrviewscn11"]
+
+[ext_resource type="Script" uid="uid://dgrview0scrpt" path="res://gear_view.gd" id="1_gview"]
+
+[node name="GearView" type="Panel"]
+custom_minimum_size = Vector2(1700, 1000)
+offset_right = 1700.0
+offset_bottom = 1000.0
+script = ExtResource("1_gview")
+
+[node name="CloseBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1620.0
+offset_top = 20.0
+offset_right = 1680.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 26
+text = "X"
+
+[node name="DisplayZone" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 960.0
+offset_bottom = 980.0
+
+[node name="ElementIcon" type="TextureRect" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 90.0
+offset_bottom = 90.0
+
+[node name="NameLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 15.0
+offset_right = 810.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 40
+text = "TIDEBREAKER SPEAR"
+
+[node name="TypeLineLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 70.0
+offset_right = 610.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 22
+text = "Weapon · Rare · Water"
+
+[node name="TierBadge" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 110.0
+offset_right = 160.0
+offset_bottom = 154.0
+theme_override_font_sizes/font_size = 26
+text = "RARE"
+horizontal_alignment = 1
+
+[node name="PrevItemBtn" type="Button" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 440.0
+offset_right = 80.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 26
+text = "<"
+
+[node name="NextItemBtn" type="Button" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 440.0
+offset_right = 920.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 26
+text = ">"
+
+[node name="Portrait" type="TextureRect" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 160.0
+offset_right = 720.0
+offset_bottom = 680.0
+
+[node name="FlavorLabel" type="Label" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 695.0
+offset_right = 870.0
+offset_bottom = 755.0
+theme_override_font_sizes/font_size = 20
+text = "Forged from ocean depths and honed by relentless tides. Its thrust drowns foes in unstoppable force."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="StatStrip" type="Panel" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 770.0
+offset_right = 920.0
+offset_bottom = 900.0
+
+[node name="StatHeaderLabel" type="Label" parent="DisplayZone/StatStrip"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 520.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 20
+text = "STAT CONTRIBUTION (From this item)"
+
+[node name="StatInfoBtn" type="Button" parent="DisplayZone/StatStrip"]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 10.0
+offset_right = 880.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 22
+text = "i"
+
+[node name="AttackIcon" type="TextureRect" parent="DisplayZone/StatStrip"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 70.0
+offset_right = 100.0
+offset_bottom = 110.0
+
+[node name="AttackLabel" type="Label" parent="DisplayZone/StatStrip"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 70.0
+offset_right = 330.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 24
+text = "Attack +61.2"
+
+[node name="DefenseIcon" type="TextureRect" parent="DisplayZone/StatStrip"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 70.0
+offset_right = 380.0
+offset_bottom = 110.0
+
+[node name="DefenseLabel" type="Label" parent="DisplayZone/StatStrip"]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 70.0
+offset_right = 630.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 24
+text = "Defense +61.2"
+
+[node name="HPIcon" type="TextureRect" parent="DisplayZone/StatStrip"]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 70.0
+offset_right = 690.0
+offset_bottom = 110.0
+
+[node name="HPLabel" type="Label" parent="DisplayZone/StatStrip"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 70.0
+offset_right = 880.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 24
+text = "HP +612"
+
+[node name="ViewIn3DBtn" type="Button" parent="DisplayZone"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 915.0
+offset_right = 620.0
+offset_bottom = 975.0
+theme_override_font_sizes/font_size = 24
+text = "VIEW IN 3D"
+
+[node name="AttributesZone" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 1000.0
+offset_top = 20.0
+offset_right = 1680.0
+offset_bottom = 980.0
+
+[node name="ItemAttributesHeaderLabel" type="Label" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 410.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 28
+text = "ITEM ATTRIBUTES"
+
+[node name="AttributeCard1" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 55.0
+offset_right = 670.0
+offset_bottom = 155.0
+
+[node name="AttrIcon" type="TextureRect" parent="AttributesZone/AttributeCard1"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 17.0
+offset_right = 81.0
+offset_bottom = 83.0
+
+[node name="AttrNameLabel" type="Label" parent="AttributesZone/AttributeCard1"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 10.0
+offset_right = 440.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "ATTACK POWER"
+
+[node name="AttrDescLabel" type="Label" parent="AttributesZone/AttributeCard1"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 42.0
+offset_right = 490.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 16
+text = "Increases the item's Attack contribution."
+autowrap_mode = 3
+
+[node name="AttrValueLabel" type="Label" parent="AttributesZone/AttributeCard1"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 30.0
+offset_right = 650.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 30
+text = "+10%"
+horizontal_alignment = 2
+
+[node name="AttributeCard2" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 165.0
+offset_right = 670.0
+offset_bottom = 265.0
+
+[node name="AttrIcon" type="TextureRect" parent="AttributesZone/AttributeCard2"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 17.0
+offset_right = 81.0
+offset_bottom = 83.0
+
+[node name="AttrNameLabel" type="Label" parent="AttributesZone/AttributeCard2"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 10.0
+offset_right = 440.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "ELEMENT POWER"
+
+[node name="AttrDescLabel" type="Label" parent="AttributesZone/AttributeCard2"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 42.0
+offset_right = 490.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 16
+text = "Increases the item's Element Power (affects all elements)."
+autowrap_mode = 3
+
+[node name="AttrValueLabel" type="Label" parent="AttributesZone/AttributeCard2"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 30.0
+offset_right = 650.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 30
+text = "+10%"
+horizontal_alignment = 2
+
+[node name="AttributeCard3" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 275.0
+offset_right = 670.0
+offset_bottom = 375.0
+
+[node name="AttrIcon" type="TextureRect" parent="AttributesZone/AttributeCard3"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 17.0
+offset_right = 81.0
+offset_bottom = 83.0
+
+[node name="AttrNameLabel" type="Label" parent="AttributesZone/AttributeCard3"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 10.0
+offset_right = 440.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "ATTACK SPEED"
+
+[node name="AttrDescLabel" type="Label" parent="AttributesZone/AttributeCard3"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 42.0
+offset_right = 490.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 16
+text = "Increases the item's Attack Speed."
+autowrap_mode = 3
+
+[node name="AttrValueLabel" type="Label" parent="AttributesZone/AttributeCard3"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 30.0
+offset_right = 650.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 30
+text = "+10%"
+horizontal_alignment = 2
+
+[node name="AttributeCard4" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 385.0
+offset_right = 670.0
+offset_bottom = 485.0
+
+[node name="AttrIcon" type="TextureRect" parent="AttributesZone/AttributeCard4"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 17.0
+offset_right = 81.0
+offset_bottom = 83.0
+
+[node name="AttrNameLabel" type="Label" parent="AttributesZone/AttributeCard4"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 10.0
+offset_right = 440.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 22
+text = "SLOW"
+
+[node name="AttrDescLabel" type="Label" parent="AttributesZone/AttributeCard4"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 42.0
+offset_right = 490.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 16
+text = "Applies Slow to the target. Reduces Movement Speed."
+autowrap_mode = 3
+
+[node name="AttrValueLabel" type="Label" parent="AttributesZone/AttributeCard4"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 30.0
+offset_right = 650.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 30
+text = "+10%"
+horizontal_alignment = 2
+
+[node name="ElementHeaderLabel" type="Label" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 505.0
+offset_right = 310.0
+offset_bottom = 539.0
+theme_override_font_sizes/font_size = 28
+text = "ELEMENT"
+
+[node name="ElementCard" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 545.0
+offset_right = 670.0
+offset_bottom = 660.0
+
+[node name="ElemIcon" type="TextureRect" parent="AttributesZone/ElementCard"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 22.0
+offset_right = 85.0
+offset_bottom = 92.0
+
+[node name="ElemNameLabel" type="Label" parent="AttributesZone/ElementCard"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 12.0
+offset_right = 350.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 26
+text = "WATER"
+
+[node name="ElemSuperiorLabel" type="Label" parent="AttributesZone/ElementCard"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 50.0
+offset_right = 450.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 18
+text = "Superior vs: Fire"
+
+[node name="ElemWeakLabel" type="Label" parent="AttributesZone/ElementCard"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 80.0
+offset_right = 450.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 18
+text = "Weak vs: Lightning"
+
+[node name="ItemDetailsHeaderLabel" type="Label" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 680.0
+offset_right = 310.0
+offset_bottom = 714.0
+theme_override_font_sizes/font_size = 28
+text = "ITEM DETAILS"
+
+[node name="ItemDetailsPanel" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 720.0
+offset_right = 670.0
+offset_bottom = 900.0
+
+[node name="TierRowLabel" type="Label" parent="AttributesZone/ItemDetailsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 8.0
+offset_right = 270.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 20
+text = "Tier"
+
+[node name="TierRowValue" type="Label" parent="AttributesZone/ItemDetailsPanel"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 8.0
+offset_right = 640.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 20
+text = "Rare"
+horizontal_alignment = 2
+
+[node name="SlotRowLabel" type="Label" parent="AttributesZone/ItemDetailsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 42.0
+offset_right = 270.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 20
+text = "Slot"
+
+[node name="SlotRowValue" type="Label" parent="AttributesZone/ItemDetailsPanel"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 42.0
+offset_right = 640.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 20
+text = "Weapon"
+horizontal_alignment = 2
+
+[node name="PowerRowLabel" type="Label" parent="AttributesZone/ItemDetailsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 76.0
+offset_right = 270.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 20
+text = "Power Contribution"
+
+[node name="PowerRowValue" type="Label" parent="AttributesZone/ItemDetailsPanel"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 76.0
+offset_right = 640.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 20
+text = "8,147"
+horizontal_alignment = 2
+
+[node name="MatchRowLabel" type="Label" parent="AttributesZone/ItemDetailsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 110.0
+offset_right = 270.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 20
+text = "Element Match Bonus"
+
+[node name="MatchRowValue" type="Label" parent="AttributesZone/ItemDetailsPanel"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 110.0
+offset_right = 640.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 20
+text = "+30%"
+horizontal_alignment = 2
+
+[node name="OffElementRowLabel" type="Label" parent="AttributesZone/ItemDetailsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 144.0
+offset_right = 270.0
+offset_bottom = 174.0
+theme_override_font_sizes/font_size = 20
+text = "Off-element Bonus"
+
+[node name="OffElementRowValue" type="Label" parent="AttributesZone/ItemDetailsPanel"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 144.0
+offset_right = 640.0
+offset_bottom = 174.0
+theme_override_font_sizes/font_size = 20
+text = "+20%"
+horizontal_alignment = 2
+
+[node name="EquippedByPanel" type="Panel" parent="AttributesZone"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 915.0
+offset_right = 670.0
+offset_bottom = 955.0
+
+[node name="EquippedByLabel" type="Label" parent="AttributesZone/EquippedByPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 5.0
+offset_right = 520.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 20
+text = "Equipped by: Not equipped"

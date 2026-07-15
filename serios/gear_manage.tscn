@@ -1,0 +1,657 @@
+[gd_scene format=3 uid="uid://bgrmngscn13"]
+
+[ext_resource type="Script" uid="uid://dgrmng00scrpt" path="res://gear_manage.gd" id="1_gmng"]
+[ext_resource type="PackedScene" uid="uid://bgrcellscn10" path="res://gear_cell.tscn" id="2_gcell"]
+[ext_resource type="PackedScene" uid="uid://bgrviewscn11" path="res://gear_view.tscn" id="3_gview"]
+
+[node name="GearManage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gmng")
+
+[node name="TopBar" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 2532.0
+offset_bottom = 100.0
+
+[node name="BackBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+
+[node name="TitleLabel" type="Label" parent="TopBar"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 20.0
+offset_right = 780.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 46
+text = "GENERALS > GEAR"
+
+[node name="HelpBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 790.0
+offset_top = 20.0
+offset_right = 840.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 26
+text = "?"
+
+[node name="ResourceBar" type="Panel" parent="TopBar"]
+layout_mode = 0
+offset_left = 1820.0
+offset_top = 10.0
+offset_right = 2440.0
+offset_bottom = 90.0
+
+[node name="GoldSlot" type="Panel" parent="TopBar/ResourceBar"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 300.0
+offset_bottom = 70.0
+
+[node name="GoldIcon" type="TextureRect" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="GoldLabel" type="Label" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 235.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Gold 938,250"
+horizontal_alignment = 1
+
+[node name="GoldPlusBtn" type="Button" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 10.0
+offset_right = 290.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="GemSlot" type="Panel" parent="TopBar/ResourceBar"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 10.0
+offset_right = 620.0
+offset_bottom = 70.0
+
+[node name="GemIcon" type="TextureRect" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="GemLabel" type="Label" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 215.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Gems 1,250"
+horizontal_alignment = 1
+
+[node name="GemPlusBtn" type="Button" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 10.0
+offset_right = 270.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="SettingsBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 2452.0
+offset_top = 15.0
+offset_right = 2512.0
+offset_bottom = 85.0
+
+[node name="OverviewStrip" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 120.0
+offset_right = 2512.0
+offset_bottom = 240.0
+
+[node name="SelectedItemNameLabel" type="Label" parent="OverviewStrip"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 15.0
+offset_right = 630.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 32
+text = "Tidebreaker Spear"
+
+[node name="StripTierLabel" type="Label" parent="OverviewStrip"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 68.0
+offset_right = 230.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 22
+text = "Rare"
+
+[node name="StripSlotLabel" type="Label" parent="OverviewStrip"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 68.0
+offset_right = 440.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 22
+text = "Weapon"
+
+[node name="StripStatsLabel" type="Label" parent="OverviewStrip"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 40.0
+offset_right = 1400.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 24
+text = "Attack +61.2 · Defense +61.2 · HP +612"
+
+[node name="ViewItemBtn" type="Button" parent="OverviewStrip"]
+layout_mode = 0
+offset_left = 2240.0
+offset_top = 30.0
+offset_right = 2460.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 24
+text = "VIEW"
+
+[node name="GridPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 260.0
+offset_right = 1780.0
+offset_bottom = 1150.0
+
+[node name="AllTabBtn" type="Button" parent="GridPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 240.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 24
+text = "ALL"
+
+[node name="SlotFilterBtn" type="Button" parent="GridPanel"]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 25.0
+offset_right = 540.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 20
+text = "SLOT: ALL"
+
+[node name="SortBtn" type="Button" parent="GridPanel"]
+layout_mode = 0
+offset_left = 1540.0
+offset_top = 25.0
+offset_right = 1740.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 20
+text = "SORT"
+
+[node name="CellScroll" type="ScrollContainer" parent="GridPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 100.0
+offset_right = 1720.0
+offset_bottom = 870.0
+
+[node name="CellGrid" type="GridContainer" parent="GridPanel/CellScroll"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 8
+
+[node name="GearCell1" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell2" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell3" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell4" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell5" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell6" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell7" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell8" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell9" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell10" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell11" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell12" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell13" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell14" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell15" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell16" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell17" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell18" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell19" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell20" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell21" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="GearCell22" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_gcell")]
+layout_mode = 2
+
+[node name="EquipmentPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1800.0
+offset_top = 260.0
+offset_right = 2512.0
+offset_bottom = 1150.0
+
+[node name="EquipmentHeaderLabel" type="Label" parent="EquipmentPanel"]
+layout_mode = 0
+offset_top = 15.0
+offset_right = 712.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 30
+text = "EQUIPMENT"
+horizontal_alignment = 1
+
+[node name="HelmetBox" type="Panel" parent="EquipmentPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 350.0
+offset_bottom = 235.0
+
+[node name="SlotIcon" type="TextureRect" parent="EquipmentPanel/HelmetBox"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 105.0
+offset_bottom = 132.0
+
+[node name="SlotNameLabel" type="Label" parent="EquipmentPanel/HelmetBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 15.0
+offset_right = 315.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 20
+text = "HELMET"
+
+[node name="SlotTierLabel" type="Label" parent="EquipmentPanel/HelmetBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 48.0
+offset_right = 315.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 18
+text = "RARE"
+
+[node name="SlotPercentLabel" type="Label" parent="EquipmentPanel/HelmetBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 315.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 28
+text = "52%"
+
+[node name="NecklaceBox" type="Panel" parent="EquipmentPanel"]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 60.0
+offset_right = 696.0
+offset_bottom = 235.0
+
+[node name="SlotIcon" type="TextureRect" parent="EquipmentPanel/NecklaceBox"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 105.0
+offset_bottom = 132.0
+
+[node name="SlotNameLabel" type="Label" parent="EquipmentPanel/NecklaceBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 15.0
+offset_right = 315.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 20
+text = "NECKLACE"
+
+[node name="SlotTierLabel" type="Label" parent="EquipmentPanel/NecklaceBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 48.0
+offset_right = 315.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 18
+text = "UNCOMMON"
+
+[node name="SlotPercentLabel" type="Label" parent="EquipmentPanel/NecklaceBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 315.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 28
+text = "22%"
+
+[node name="ChestBox" type="Panel" parent="EquipmentPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 245.0
+offset_right = 350.0
+offset_bottom = 420.0
+
+[node name="SlotIcon" type="TextureRect" parent="EquipmentPanel/ChestBox"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 105.0
+offset_bottom = 132.0
+
+[node name="SlotNameLabel" type="Label" parent="EquipmentPanel/ChestBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 15.0
+offset_right = 315.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 20
+text = "CHEST"
+
+[node name="SlotTierLabel" type="Label" parent="EquipmentPanel/ChestBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 48.0
+offset_right = 315.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 18
+text = "RARE"
+
+[node name="SlotPercentLabel" type="Label" parent="EquipmentPanel/ChestBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 315.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 28
+text = "78%"
+
+[node name="RingBox" type="Panel" parent="EquipmentPanel"]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 245.0
+offset_right = 696.0
+offset_bottom = 420.0
+
+[node name="SlotIcon" type="TextureRect" parent="EquipmentPanel/RingBox"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 105.0
+offset_bottom = 132.0
+
+[node name="SlotNameLabel" type="Label" parent="EquipmentPanel/RingBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 15.0
+offset_right = 315.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 20
+text = "RING"
+
+[node name="SlotTierLabel" type="Label" parent="EquipmentPanel/RingBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 48.0
+offset_right = 315.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 18
+text = "COMMON"
+
+[node name="SlotPercentLabel" type="Label" parent="EquipmentPanel/RingBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 315.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 28
+text = "6%"
+
+[node name="GlovesBox" type="Panel" parent="EquipmentPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 430.0
+offset_right = 350.0
+offset_bottom = 605.0
+
+[node name="SlotIcon" type="TextureRect" parent="EquipmentPanel/GlovesBox"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 105.0
+offset_bottom = 132.0
+
+[node name="SlotNameLabel" type="Label" parent="EquipmentPanel/GlovesBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 15.0
+offset_right = 315.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 20
+text = "GLOVES"
+
+[node name="SlotTierLabel" type="Label" parent="EquipmentPanel/GlovesBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 48.0
+offset_right = 315.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 18
+text = "UNCOMMON"
+
+[node name="SlotPercentLabel" type="Label" parent="EquipmentPanel/GlovesBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 315.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 28
+text = "38%"
+
+[node name="WeaponBox" type="Panel" parent="EquipmentPanel"]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 430.0
+offset_right = 696.0
+offset_bottom = 605.0
+
+[node name="SlotIcon" type="TextureRect" parent="EquipmentPanel/WeaponBox"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 105.0
+offset_bottom = 132.0
+
+[node name="SlotNameLabel" type="Label" parent="EquipmentPanel/WeaponBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 15.0
+offset_right = 315.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 20
+text = "WEAPON"
+
+[node name="SlotTierLabel" type="Label" parent="EquipmentPanel/WeaponBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 48.0
+offset_right = 315.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 18
+text = "EPIC"
+
+[node name="SlotPercentLabel" type="Label" parent="EquipmentPanel/WeaponBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 315.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 28
+text = "112%"
+
+[node name="LegsBox" type="Panel" parent="EquipmentPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 615.0
+offset_right = 350.0
+offset_bottom = 790.0
+
+[node name="SlotIcon" type="TextureRect" parent="EquipmentPanel/LegsBox"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 105.0
+offset_bottom = 132.0
+
+[node name="SlotNameLabel" type="Label" parent="EquipmentPanel/LegsBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 15.0
+offset_right = 315.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 20
+text = "LEGS"
+
+[node name="SlotTierLabel" type="Label" parent="EquipmentPanel/LegsBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 48.0
+offset_right = 315.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 18
+text = "RARE"
+
+[node name="SlotPercentLabel" type="Label" parent="EquipmentPanel/LegsBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 315.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 28
+text = "54%"
+
+[node name="GlyphBox" type="Panel" parent="EquipmentPanel"]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 615.0
+offset_right = 696.0
+offset_bottom = 790.0
+
+[node name="SlotIcon" type="TextureRect" parent="EquipmentPanel/GlyphBox"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 105.0
+offset_bottom = 132.0
+
+[node name="SlotNameLabel" type="Label" parent="EquipmentPanel/GlyphBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 15.0
+offset_right = 315.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 20
+text = "GLYPH"
+
+[node name="SlotTierLabel" type="Label" parent="EquipmentPanel/GlyphBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 48.0
+offset_right = 315.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 18
+text = "RARE"
+
+[node name="SlotPercentLabel" type="Label" parent="EquipmentPanel/GlyphBox"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 315.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 28
+text = "104%"
+
+[node name="ConfirmSelectionBtn" type="Button" parent="EquipmentPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 810.0
+offset_right = 696.0
+offset_bottom = 880.0
+theme_override_font_sizes/font_size = 28
+text = "CONFIRM SELECTION"
+
+[node name="DimBackdrop" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 100.0
+offset_right = 2532.0
+offset_bottom = 1170.0
+color = Color(0, 0, 0, 0.6)
+
+[node name="GearView" parent="." instance=ExtResource("3_gview")]
+visible = false
+layout_mode = 0
+offset_left = 416.0
+offset_top = 135.0
+offset_right = 2116.0
+offset_bottom = 1135.0

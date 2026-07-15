@@ -8,6 +8,7 @@ func _ready() -> void:
 	$ModeButtons/BattleBtn.pressed.connect(_on_battle)
 	$ModeButtons/MatchmakingBtn.pressed.connect(_on_matchmaking)
 	$RightColumn/GeneralsBtn.pressed.connect(_on_generals)
+	$PlayerInfo/Avatar/AvatarBtn.pressed.connect(_on_profile)
 
 func _on_campaign() -> void:
 	Nav.go_to("res://campaign.tscn")
@@ -20,6 +21,9 @@ func _on_matchmaking() -> void:
 
 func _on_generals() -> void:
 	Nav.go_to("res://generals.tscn")
+
+func _on_profile() -> void:
+	Nav.go_to("res://user_profile.tscn")
 
 func _connect_all_buttons(node: Node) -> void:
 	for child in node.get_children():

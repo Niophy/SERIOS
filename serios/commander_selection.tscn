@@ -1,0 +1,446 @@
+[gd_scene format=3 uid="uid://bcmdselscene8"]
+
+[ext_resource type="Script" uid="uid://dcmdsel0scrpt" path="res://commander_selection.gd" id="1_csel"]
+[ext_resource type="PackedScene" uid="uid://bcmdcelscene6" path="res://commander_cell.tscn" id="2_ccell"]
+[ext_resource type="PackedScene" uid="uid://bcmdrowscene5" path="res://commander_row.tscn" id="3_crow"]
+[ext_resource type="PackedScene" uid="uid://bcmdvwscn14" path="res://commander_view.tscn" id="4_cview"]
+
+[node name="CommanderSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_csel")
+
+[node name="TopBar" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 2532.0
+offset_bottom = 100.0
+
+[node name="BackBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+
+[node name="TitleLabel" type="Label" parent="TopBar"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 20.0
+offset_right = 880.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 46
+text = "COMMANDER SELECTION"
+
+[node name="HelpBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 890.0
+offset_top = 20.0
+offset_right = 940.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 26
+text = "?"
+
+[node name="ResourceBar" type="Panel" parent="TopBar"]
+layout_mode = 0
+offset_left = 1440.0
+offset_top = 10.0
+offset_right = 2440.0
+offset_bottom = 90.0
+
+[node name="DrillSlot" type="Panel" parent="TopBar/ResourceBar"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 380.0
+offset_bottom = 70.0
+
+[node name="DrillIcon" type="TextureRect" parent="TopBar/ResourceBar/DrillSlot"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="DrillLabel" type="Label" parent="TopBar/ResourceBar/DrillSlot"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 315.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Drill Manuals 12,384"
+horizontal_alignment = 1
+
+[node name="DrillPlusBtn" type="Button" parent="TopBar/ResourceBar/DrillSlot"]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 10.0
+offset_right = 375.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="GoldSlot" type="Panel" parent="TopBar/ResourceBar"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 10.0
+offset_right = 700.0
+offset_bottom = 70.0
+
+[node name="GoldIcon" type="TextureRect" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="GoldLabel" type="Label" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 235.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Gold 938,250"
+horizontal_alignment = 1
+
+[node name="GoldPlusBtn" type="Button" parent="TopBar/ResourceBar/GoldSlot"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 10.0
+offset_right = 290.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="GemSlot" type="Panel" parent="TopBar/ResourceBar"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 10.0
+offset_right = 1000.0
+offset_bottom = 70.0
+
+[node name="GemIcon" type="TextureRect" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="GemLabel" type="Label" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 10.0
+offset_right = 215.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Gems 1,250"
+horizontal_alignment = 1
+
+[node name="GemPlusBtn" type="Button" parent="TopBar/ResourceBar/GemSlot"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 10.0
+offset_right = 270.0
+offset_bottom = 50.0
+text = "+"
+
+[node name="SettingsBtn" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 2452.0
+offset_top = 15.0
+offset_right = 2512.0
+offset_bottom = 85.0
+
+[node name="GridPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 120.0
+offset_right = 1660.0
+offset_bottom = 1040.0
+
+[node name="AllCommandersTabBtn" type="Button" parent="GridPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 340.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 24
+text = "ALL COMMANDERS"
+
+[node name="LockedTabBtn" type="Button" parent="GridPanel"]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 20.0
+offset_right = 580.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 24
+text = "LOCKED"
+
+[node name="ElementFilterBtn" type="Button" parent="GridPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 100.0
+offset_right = 280.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 20
+text = "ELEMENT: ALL"
+
+[node name="OwnedLabel" type="Label" parent="GridPanel"]
+layout_mode = 0
+offset_left = 1100.0
+offset_top = 105.0
+offset_right = 1400.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 24
+text = "Owned: 37 / 64"
+horizontal_alignment = 2
+
+[node name="SortBtn" type="Button" parent="GridPanel"]
+layout_mode = 0
+offset_left = 1420.0
+offset_top = 100.0
+offset_right = 1620.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 20
+text = "SORT"
+
+[node name="CellScroll" type="ScrollContainer" parent="GridPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 170.0
+offset_right = 1620.0
+offset_bottom = 900.0
+
+[node name="CellGrid" type="GridContainer" parent="GridPanel/CellScroll"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 7
+
+[node name="CommanderCell1" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell2" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell3" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell4" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell5" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell6" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell7" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell8" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell9" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell10" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell11" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell12" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell13" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="CommanderCell14" parent="GridPanel/CellScroll/CellGrid" instance=ExtResource("2_ccell")]
+layout_mode = 2
+
+[node name="SelectedPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1690.0
+offset_top = 120.0
+offset_right = 2512.0
+offset_bottom = 1040.0
+
+[node name="SelectedHeaderLabel" type="Label" parent="SelectedPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 520.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 28
+text = "SELECTED COMMANDERS"
+
+[node name="SelectedRow1" parent="SelectedPanel" instance=ExtResource("3_crow")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 580.0
+offset_bottom = 220.0
+
+[node name="LockBtn1" type="Button" parent="SelectedPanel"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 120.0
+offset_right = 760.0
+offset_bottom = 180.0
+
+[node name="SelectedRow2" parent="SelectedPanel" instance=ExtResource("3_crow")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 235.0
+offset_right = 580.0
+offset_bottom = 375.0
+
+[node name="LockBtn2" type="Button" parent="SelectedPanel"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 275.0
+offset_right = 760.0
+offset_bottom = 335.0
+
+[node name="SelectedRow3" parent="SelectedPanel" instance=ExtResource("3_crow")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 390.0
+offset_right = 580.0
+offset_bottom = 530.0
+
+[node name="LockBtn3" type="Button" parent="SelectedPanel"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 430.0
+offset_right = 760.0
+offset_bottom = 490.0
+
+[node name="SelectedRow4" parent="SelectedPanel" instance=ExtResource("3_crow")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 545.0
+offset_right = 580.0
+offset_bottom = 685.0
+
+[node name="LockBtn4" type="Button" parent="SelectedPanel"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 585.0
+offset_right = 760.0
+offset_bottom = 645.0
+
+[node name="EmptySlotPanel" type="Panel" parent="SelectedPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 700.0
+offset_right = 802.0
+offset_bottom = 790.0
+
+[node name="EmptyLockIcon" type="TextureRect" parent="SelectedPanel/EmptySlotPanel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 65.0
+offset_bottom = 65.0
+
+[node name="EmptySlotLabel" type="Label" parent="SelectedPanel/EmptySlotPanel"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 25.0
+offset_right = 585.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 24
+text = "Unlocks at 5 selected"
+
+[node name="EmptyCountLabel" type="Label" parent="SelectedPanel/EmptySlotPanel"]
+layout_mode = 0
+offset_left = 690.0
+offset_top = 25.0
+offset_right = 750.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 28
+text = "5"
+horizontal_alignment = 2
+
+[node name="ConfirmSelectionBtn" type="Button" parent="SelectedPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 820.0
+offset_right = 802.0
+offset_bottom = 900.0
+theme_override_font_sizes/font_size = 30
+text = "CONFIRM SELECTION"
+
+[node name="FooterBar" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 1060.0
+offset_right = 2512.0
+offset_bottom = 1150.0
+
+[node name="LockHintLabel" type="Label" parent="FooterBar"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 25.0
+offset_right = 660.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 20
+text = "Tap a commander once to LOCK. Tap again to UNLOCK."
+
+[node name="SelectHintLabel" type="Label" parent="FooterBar"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 25.0
+offset_right = 1340.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 20
+text = "Tap a commander twice to SELECT or deselect."
+
+[node name="SelectedCountLabel" type="Label" parent="FooterBar"]
+layout_mode = 0
+offset_left = 1670.0
+offset_top = 12.0
+offset_right = 2090.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 20
+text = "Selected Commanders:  4 / 64"
+
+[node name="TotalBonusLabel" type="Label" parent="FooterBar"]
+layout_mode = 0
+offset_left = 1670.0
+offset_top = 50.0
+offset_right = 2090.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 20
+text = "Total Commander Bonus  +24.6%"
+
+[node name="InfoBtn" type="Button" parent="FooterBar"]
+layout_mode = 0
+offset_left = 2110.0
+offset_top = 25.0
+offset_right = 2150.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 22
+text = "i"
+
+[node name="DimBackdrop" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 100.0
+offset_right = 2532.0
+offset_bottom = 1170.0
+color = Color(0, 0, 0, 0.6)
+
+[node name="CommanderView" parent="." instance=ExtResource("4_cview")]
+visible = false
+layout_mode = 0
+offset_left = 416.0
+offset_top = 135.0
+offset_right = 2116.0
+offset_bottom = 1135.0

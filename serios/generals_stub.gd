@@ -6,4 +6,4 @@ func _ready() -> void:
 	$TitleLabel.text = str(Nav.payload.get("section", "Generals — Stub"))
 
 func _on_back() -> void:
-	Nav.go_to("res://generals.tscn")
+	Nav.go_to(str(Nav.payload.get("back", "res://generals.tscn")))
